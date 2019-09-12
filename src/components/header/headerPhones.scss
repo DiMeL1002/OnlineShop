@@ -1,0 +1,30 @@
+@import '~/static/utils/vars.scss';
+@import '~/static/utils/mixins.scss';
+
+.phones {
+    display: flex;
+
+    &__phone:not(:last-child) { margin-right: 30px; }
+
+    &__phone:last-child {
+        @media screen and (max-width: $sm-desktop-width) { display: none; }
+    }
+
+    &__number {
+        display: block;
+        white-space: nowrap;
+
+        @include text-level-2
+    }
+
+    &__text {
+        display: block;
+
+        &_is-link {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        @include text-level-5
+    }
+}

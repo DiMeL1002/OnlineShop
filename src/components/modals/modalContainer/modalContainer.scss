@@ -1,0 +1,32 @@
+@import '~/static/utils/vars.scss';
+@import '~/static/utils/mixins.scss';
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1001;
+    box-sizing: border-box;
+    max-width: 410px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: $header-bg;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.1), 0 5px 10px 0 rgba(0, 0, 0, 0.05);
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &__title { @include text-level-1; }
+
+    &__close-icon {
+        width: 16px;
+        fill: $main-action-color;
+        cursor: pointer;
+    }
+}

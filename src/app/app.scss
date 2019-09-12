@@ -1,0 +1,65 @@
+@import '../static/utils/vars.scss';
+@import '../static/utils/fonts.scss';
+
+// * { // Фикс бага с шириной слайдеров
+//     min-height: 0;
+//     min-width: 0;
+// }
+
+html {
+    height: 100%;
+    // color: $dark-shade-75;
+    font-family: $main-regular-font;
+    font-size: $main-font-size;
+    line-height: $main-line-height;
+
+    @media screen and (max-width: $sm-desktop-width) { font-size: 13px; }
+    @media screen and (max-width: $phone-width) { font-size: 12px; }
+}
+
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    // background-color: $white-color;
+}
+
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+
+a { text-decoration: none; }
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+p { margin: 0; }
+
+button { outline: none; }
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+}
+
+.content { flex: 1 0 auto; }
+
+.footer { flex: 0 0 auto; }
+
+.container {
+    box-sizing: border-box;
+    max-width: $container-max-width;
+    width: 100%;
+    margin: 0 auto;
+    padding-right: $desktop-offset;
+    padding-left: $desktop-offset;
+
+    @media screen and (max-width: $phone-width) {
+        padding-right: $table-offset;
+        padding-left: $table-offset;
+    }
+}

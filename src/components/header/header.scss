@@ -1,0 +1,56 @@
+@import '../../static/utils/vars.scss';
+
+.header {
+    border-bottom: 1px solid $header-bg;
+
+    @media screen and (max-width: $sm-desktop-width) {
+        border: none;
+    }
+
+    &__top {
+        padding: 10px 0;
+        background-color: $header-bg;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    &__auth { margin-left: auto; }
+
+    &__main { padding: 25px 0; }
+
+    &__logo { margin-right: 40px; }
+
+    &__basket {
+        margin-left: auto;
+        max-width: 270px;
+        width: 100%;
+    }
+
+    &__products-nav-button { flex: 0 0 47%; }
+
+    &__main-nav-mobile {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 5;
+    }
+
+    &__search-icon {
+        width: 20px;
+        margin-left: auto;
+        fill: $main-action-color;
+        cursor: pointer;
+    }
+
+    &__search {
+        position: absolute;
+        top: -25px;
+        right: 0;
+        z-index: 1;
+    }
+}

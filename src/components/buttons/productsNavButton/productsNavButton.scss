@@ -1,0 +1,20 @@
+@import '~/static/utils/vars.scss';
+@import '~/static/utils/mixins.scss';
+
+.products-nav-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+    background-color: $main-action-color;
+    color: $white-color;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &__sandwich { margin-right: 20px; }
+
+    &__title { @include text-level-2-white }
+}

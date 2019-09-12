@@ -1,0 +1,45 @@
+@import '~/static/utils/vars.scss';
+
+.sandwich {
+    position: relative;
+    width: 24px;
+    height: 16px;
+    cursor: pointer;
+
+    &__line {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $white-color;
+        transition: all linear .4s;
+
+        &_top { top: 0; }
+        &_middle { top: 7px; }
+        &_bottom { top: 14px; }
+    }
+
+    &_active {
+        .sandwich__line {
+            height: 3px;
+            &_top {
+                top: 8px;
+                transform: rotate(45deg);
+            }
+
+            &_middle { opacity: 0; }
+
+            &_bottom {
+                top: 8px;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    &_theme {
+        &_dark {
+            .sandwich__line { background-color: $main-text-color; }
+        }
+    }
+}

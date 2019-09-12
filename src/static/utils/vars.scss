@@ -1,0 +1,31 @@
+// Fonts
+$main-regular-font: 'Montserrat-Regular', Arial, sans-serif;
+$main-bold-font: 'Montserrat-Bold', Arial, sans-serif;
+
+// Size
+$main-font-size           : 14px;
+$main-line-height         : 24px;
+
+$desktop-width            : 1200px;
+$sm-desktop-width         : 992px;
+$table-width              : 768px;
+$phone-width              : 576px;
+$min-width                : 320px;
+
+$desktop-offset           : 30px;
+$table-offset             : 15px;
+
+$container-max-width      : 1440px;
+
+// Colors
+$white-color              : rgb(255, 255, 255);
+
+$main-text-color          : #4b4b4b;
+$secondary-text-color     : rgb(169, 169, 169); //silver-chalice
+
+$main-action-color        : rgb(255, 109, 0); //blaze-orange
+$secondary-action-color   :rgba(75, 75, 75, 0.5);
+
+$border-color             : rgb(221, 221, 221);
+
+$header-bg                : rgb(238, 242, 244); //athens-gray

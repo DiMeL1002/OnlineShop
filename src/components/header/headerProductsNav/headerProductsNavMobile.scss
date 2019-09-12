@@ -1,0 +1,57 @@
+@import '~/static/utils/vars.scss';
+@import '~/static/utils/mixins.scss';
+
+.main-nav-mobile {
+    border-radius: 4px;
+    box-shadow: 0 5px 30px 0 rgba(75, 75, 75, 0.5);
+    transition: all linear .5s;
+    overflow: hidden;
+
+    @media screen and (max-width: $phone-width) { border-radius: 0; }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        padding-left: 15px;
+        background-color: $main-action-color;
+    }
+
+    &__menu-title { @include text-level-2-white }
+
+    &__close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-left: 1px solid rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+    }
+
+    &__catalog-list {
+        display: flex;
+        flex-direction: column;
+        background-color: $white-color;
+    }
+
+    &__catalog-item {
+        display: flex;
+        align-items: center;
+        padding: 10px 15px;
+    }
+
+    &__info {
+        padding: 15px;
+        background-color: $header-bg;
+    }
+
+    &__info-item:not(:last-child) { margin-bottom: 5px; }
+
+    &__info-link {
+        color: $main-text-color;
+        font-size: 0.86rem;
+        line-height: 1.67;
+    }
+}
