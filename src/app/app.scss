@@ -26,7 +26,14 @@ body {
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
 
-a { text-decoration: none; }
+a {
+    text-decoration: none;
+
+    &:hover {
+        color: #23527c;
+        text-decoration: underline;
+    }
+}
 
 ul, li {
     margin: 0;
@@ -38,11 +45,13 @@ p { margin: 0; }
 
 button { outline: none; }
 
+#app { height: 100%; }
+
 .wrapper {
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: 100%;
+    height: 100%;
     margin: 0 auto;
 }
 

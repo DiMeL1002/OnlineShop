@@ -1,0 +1,33 @@
+@import '~/static/utils/vars.scss';
+@import '~/static/utils/mixins.scss';
+
+.socials {
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        margin-right: 50px;
+
+        @media screen and (max-width: $phone-width) { margin-right: 10px; }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__img {
+        margin-right: 20px;
+
+        @media screen and (max-width: $phone-width) { margin-right: 0; }
+    }
+
+    &__name {
+        @include text-level-5;
+
+        @media screen and (max-width: $phone-width) { display: none; }
+    }
+}

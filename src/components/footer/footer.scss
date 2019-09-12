@@ -1,0 +1,21 @@
+@import '~/static/utils/vars.scss';
+
+.footer {
+    background-color: $header-bg;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: $phone-width) { flex-direction: column; }
+    }
+
+    &__main { padding: 40px 0; }
+
+    &__socials { margin-bottom: 30px; }
+
+    &__bottom {
+        padding: 20px 0;
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+}

@@ -71,7 +71,7 @@ export default class extends React.Component {
                             <div className="header__content">
                                 <MediaQuery minDeviceWidth={993}>
                                     <div className="header__main-nav">
-                                        <MainNav/>
+                                        <MainNav />
                                     </div>
                                 </MediaQuery>
                                 <MediaQuery maxDeviceWidth={992}>
@@ -83,7 +83,7 @@ export default class extends React.Component {
                                     {
                                         this.state.showMenu && (
                                             <div className="header__main-nav-mobile">
-                                                <MainNavMobile hideMenu={this.hideMenu}/>
+                                                <MainNavMobile hideMenu={this.hideMenu} />
                                             </div>
                                         )
                                     }

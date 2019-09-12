@@ -6,18 +6,20 @@ import routes from '~/routes/routes'
 
 import Header from '~c/header/header'
 import HeaderMobile from '~c/header/headerMobile'
+import Footer from '~c/footer/footer'
 
 import './app.scss'
 
 export default class extends React.Component {
     render() {
         let routesComponents = routes.map((route) => {
-            return <Route
-                        path={route.url}
-                        component={route.component}
-                        exact={route.exact}
-                        key={route.url}
-                    />;
+            return ( 
+                <Route path={route.url}
+                       component={route.component}
+                       exact={route.exact}
+                       key={route.url}
+                />
+            )
         });
 
         return (
@@ -36,8 +38,8 @@ export default class extends React.Component {
                             </Switch>
                         </div>
                     </div>
+                    <Footer />
                 </div>
-                <div className="footer"></div>
             </Router>
         );
     }

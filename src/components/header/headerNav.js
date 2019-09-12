@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import { Link } from 'react-router-dom';
-import {routesMap} from '~/routes/routes';
+import { routesMap } from '~/routes/routes';
 import MediaQuery from 'react-responsive'
 
 import './headerNav.scss'
