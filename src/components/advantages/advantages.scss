@@ -1,0 +1,11 @@
+@import '~/static/utils/vars.scss';
+
+.advantages {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: $header-bg;
+
+    @media screen and (max-width: $phone-width) { padding: 20px 0; }
+}

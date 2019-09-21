@@ -5,7 +5,7 @@ import './productRating.scss'
 
 import StarIcon from '~/static/img/star.svg'
 
-export default function productRating(props) {
+export default function ProductRating(props) {
     let starsCount = 5;
     let activeCount = 0;
     let stars = [];
@@ -35,6 +35,6 @@ export default function productRating(props) {
     )
 }
 
-productRating.defaultProps = { rating: 0 };
+ProductRating.defaultProps = { rating: 0 };
 
-productRating.propTypes = { rating: PropTypes.number };
+ProductRating.propTypes = { rating: PropTypes.number };

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import './advantage.scss'
 
-let Advantage = (props) => {
+export default function Advantage(props) {
     return (
         <div className="advantage">
             <img className="advantage__img" src={props.img} />
@@ -20,5 +20,3 @@ Advantage.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
 }
-
-export default Advantage;

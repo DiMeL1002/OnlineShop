@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Banner from '~c/sliders/banner'
-import Advantage from '~c/advantage/advantage'
+import Advantages from '~c/advantages/advantages'
 import NewsPreview from '~c/news/newsPreview'
 import ReviewsPreview from '~c/reviews/reviewsPreview'
 import BrandsPreview from '~c/brands/brandsPreview'
@@ -19,20 +19,7 @@ export default class extends React.Component {
                 </div>
                 <div className="main-page__s-advantages">
                     <div className="container">
-                        <div className="main-page__advantages">
-                            <Advantage img="./img/warranty.svg"
-                                    title="Гарантия"
-                                    description="качества всех товаров"
-                            />
-                            <Advantage img="./img/delivery.svg"
-                                    title="Доставка"
-                                    description="по Москве и области"
-                            />
-                            <Advantage img="./img/payment.svg"
-                                    title="Оплата"
-                                    description="онлайн и наличными"
-                            />
-                        </div>
+                        <Advantages />
                     </div>
                 </div>
                 <div className="main-page__s-information">
