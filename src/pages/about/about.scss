@@ -10,7 +10,7 @@
         @include text-level-1;
     }
 
-    &__title-assortment {
+    &__title-h2 {
         margin: 20px 0;
 
         @include text-level-1-2;
@@ -32,13 +32,6 @@
             border-radius: 50%;
             background-color: #4b4b4b;
         }
-    }
-
-    &__title-causes {
-        display: inline-block;
-        margin: 20px 0;
-
-        @include text-level-1-2;
     }
 
     &__advantages { margin-top: 30px; }
