@@ -3,6 +3,7 @@
 .button {
     display: block;
     width: 100%;
+    box-sizing: border-box;
     padding: 15px 0;
     border: 1px solid $main-action-color;
     border-radius: 4px;
@@ -18,5 +19,39 @@
     &:hover {
         background-color: $white-color;
         color: $main-action-color;
+    }
+
+    &_theme {
+        &_reverse {
+            background-color: $white-color;
+            color: $main-action-color;
+
+            &:hover {
+                background-color: $main-action-color;
+                color: $white-color;
+            }
+        }
+
+        &_gray {
+            padding: 14px 0;
+            border: 2px solid $border-color;
+            background-color: $white-color;
+            color: $main-text-color;
+
+            &:hover {
+                background-color: $border-color;
+                color: $white-color;
+            }
+        }
+    }
+
+    &_size {
+        &_s {
+            width: 100px;
+        }
+
+        &_m {
+            width: 150px;
+        }
     }
 }

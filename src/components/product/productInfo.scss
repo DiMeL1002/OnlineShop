@@ -1,0 +1,96 @@
+@import '~/static/utils/vars.scss';
+@import '~/static/utils/mixins.scss';
+
+.product-info {
+    display: flex;
+
+    @media screen and (max-width: $table-width) { flex-direction: column; }
+
+    &__img-wrapper {
+        flex-basis: calc(50% - 15px);
+
+        @media screen and (max-width: $table-width) { margin-bottom: 30px; }
+    }
+
+    &__img {
+        display: block;
+        max-width: 350px;
+        width: 100%;
+        height: auto;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    &__description { flex-basis: 50%; }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        &:not(:last-of-type) { margin-bottom: 30px; }
+
+        &_buttons {
+            @media screen and (max-width: $phone-width) {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__name {
+        margin-right: 10px;
+
+        @include text-level-1;
+    }
+
+    &__rating {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        margin-right: 30px;
+    }
+
+    &__product-rating { margin-right: 20px; }
+
+    &__price {
+        margin-right: 20px;
+        font-family: $main-bold-font;
+        color: $main-text-color;
+        font-size: 30px;
+        white-space: nowrap;
+
+        @media screen and (max-width: $phone-width) {
+            margin-right: 0;
+            margin-bottom: 40px;
+        }
+    }
+    
+    &__buttons {
+        display: flex;
+
+        @media screen and (max-width: $phone-width) {
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+
+    &__button-buy {
+        width: 100px;
+        margin-right: 20px;
+
+        @media screen and (max-width: $phone-width) {
+            width: auto;
+            flex-basis: 48%;
+            margin-right: 0;
+        }
+    }
+
+    &__button-buy-click {
+        width: 150px;
+
+        @media screen and (max-width: $phone-width) {
+            width: auto;
+            flex-basis: 48%;
+        }
+    }
+}

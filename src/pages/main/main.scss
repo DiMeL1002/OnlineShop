@@ -1,0 +1,44 @@
+@import '~/static/utils/vars.scss';
+
+.main-page {
+    .banner__container {
+        @media screen and (max-width: $phone-width) { padding: 0; }
+    }
+
+    &__advantages {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: $header-bg;
+
+        @media screen and (max-width: $phone-width) { padding: 20px 0; }
+    }
+
+    &__s-information { padding: 35px 0; }
+
+    &__information {
+        display: flex;
+
+        @media screen and (max-width: 1100px) { flex-wrap: wrap; }
+    }
+
+    &__information-item {
+        padding-right: 30px;
+        flex: 1;
+
+        &:nth-child(2) {
+            @media screen and (max-width: 650px) {
+                flex-basis: 100%;
+                margin-top: 50px;
+            }
+        }
+
+        &:nth-child(3) {
+            @media screen and (max-width: 1100px) {
+                flex-basis: 100%;
+                margin-top: 50px;
+            }
+        }
+    }
+}

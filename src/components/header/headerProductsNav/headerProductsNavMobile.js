@@ -28,17 +28,17 @@ export default class extends React.Component {
                     <nav className="main-nav-mobile__catalog">
                         <ul className="main-nav-mobile__catalog-list">
                             <li className="main-nav-mobile__catalog-item">
-                                <a className="main-nav-mobile__catalog-link">Велосипеды</a>
+                                <a className="main-nav-mobile__catalog-link">Телефоны</a>
                             </li>
                             <li className="main-nav-mobile__catalog-item">
-                                <a className="main-nav-mobile__catalog-link">Скейты</a>
+                                <a className="main-nav-mobile__catalog-link">Планшеты</a>
                             </li>
                             <li className="main-nav-mobile__catalog-item">
-                                <a className="main-nav-mobile__catalog-link">Ролики</a>
+                                <a className="main-nav-mobile__catalog-link">Часы</a>
                             </li>
                             <li className="main-nav-mobile__catalog-item">
                                 <a className="main-nav-mobile__catalog-link">
-                                    Аксессуары и запчасти
+                                    Аксессуары
                                 </a>
                             </li>
                         </ul>

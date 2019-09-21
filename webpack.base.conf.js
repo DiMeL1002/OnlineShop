@@ -39,7 +39,7 @@ module.exports = {
     //     }
     // },
 
-    // devtool: 'source-map', // карты js
+    devtool: 'source-map', // карты js
     module: {
         rules: [
             {
@@ -47,14 +47,14 @@ module.exports = {
                 use: [
                     'style-loader',
                     MiniCssExtractPlugin.loader,
-                    { loader: 'css-loader', options: { sourceMap: false } },
+                    { loader: 'css-loader', options: { sourceMap: true } },
                     {
                         loader: 'postcss-loader',
                         options: {
-                            sourceMap: false, config: { path: './postcss.config.js'}
+                            sourceMap: true, config: { path: './postcss.config.js'}
                         }
                     },
-                    { loader: 'sass-loader', options: { sourceMap: false } }
+                    { loader: 'sass-loader', options: { sourceMap: true } }
                 ]
             },
             {
@@ -62,14 +62,14 @@ module.exports = {
                 use: [
                     'style-loader',
                     MiniCssExtractPlugin.loader,
-                    { loader: 'css-loader', options: { sourceMap: false } },
+                    { loader: 'css-loader', options: { sourceMap: true } },
                     {
                         loader: 'postcss-loader',
                         options: {
-                            sourceMap: false, config: { path: './postcss.config.js'}
+                            sourceMap: true, config: { path: './postcss.config.js'}
                         }
                     },
-                    { loader: 'sass-loader', options: { sourceMap: false } }
+                    { loader: 'sass-loader', options: { sourceMap: true } }
                 ]
             },
             {

@@ -1,0 +1,63 @@
+@import '~/static/utils/vars.scss';
+@import '~/static/utils/mixins.scss';
+
+.news-preview {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &__title {
+        margin-bottom: 30px;
+
+        @include text-level-1-2;
+    }
+
+    &__items {
+        margin-bottom: 20px;
+
+        @media screen and (max-width: 650px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+
+    &__item {
+        display: flex;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+
+            @media screen and (max-width: 650px) {
+                flex-shrink: 0;
+                margin-right: 20px;
+            }
+        }
+
+        &:hover {
+            .news-preview__img {
+                box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1),
+                            0 2px 5px 0 rgba(0, 0, 0, 0.05);
+            }
+            
+        }
+    }
+
+    &__img {
+        width: 80px;
+        height: 80px;
+        margin-right: 20px;
+        transition: all linear .3s;
+    }
+
+    &__link {
+        margin-top: auto;
+        text-decoration: underline;
+        cursor: pointer;
+
+        @include text-level-4;
+
+        &:hover { text-decoration: none; }
+    }
+}

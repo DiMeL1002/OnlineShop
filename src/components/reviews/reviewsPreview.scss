@@ -1,0 +1,43 @@
+@import '~/static/utils/vars.scss';
+@import '~/static/utils/mixins.scss';
+
+.reviews-preview {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &__title {
+        margin-bottom: 30px;
+
+        @include text-level-1-2;
+    }
+
+    &__review { margin-bottom: 20px; }
+
+    &__text {
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    &__author {
+        display: inline-block;
+        height: 20px;
+        padding: 0 15px;
+        border: 1px solid rgba(38, 38, 38, 0.1);;
+        border-radius: 20px;
+        background-color: $white-color;
+        color: $secondary-text-color;
+        font-size: 0.86rem;
+        line-height: 20px;
+    }
+
+    &__link {
+        margin-top: auto;
+        text-decoration: underline;
+        cursor: pointer;
+
+        @include text-level-4;
+
+        &:hover { text-decoration: none; }
+    }
+}

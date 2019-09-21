@@ -10,16 +10,16 @@ export default function() {
             <div className="footer-nav__item">
                 <ul className="footer-nav__list">
                     <li className="footer-nav__item">
-                        <a className="footer-nav__link">Велосипеды</a>
+                        <a className="footer-nav__link">Телефоны</a>
                     </li>
                     <li className="footer-nav__item">
-                        <a className="footer-nav__link">Скейты</a>
+                        <a className="footer-nav__link">Планшеты</a>
                     </li>
                     <li className="footer-nav__item">
-                        <a className="footer-nav__link">Ролики</a>
+                        <a className="footer-nav__link">Часы</a>
                     </li>
                     <li className="footer-nav__item">
-                        <a className="footer-nav__link">Аксессуары и запчасти</a>
+                        <a className="footer-nav__link">Аксессуары</a>
                     </li>
                 </ul>
             </div>

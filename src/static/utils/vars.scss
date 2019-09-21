@@ -6,7 +6,7 @@ $main-bold-font: 'Montserrat-Bold', Arial, sans-serif;
 $main-font-size           : 14px;
 $main-line-height         : 24px;
 
-$desktop-width            : 1200px;
+$desktop-width            : 1140px;
 $sm-desktop-width         : 992px;
 $table-width              : 768px;
 $phone-width              : 576px;
@@ -15,16 +15,16 @@ $min-width                : 320px;
 $desktop-offset           : 30px;
 $table-offset             : 15px;
 
-$container-max-width      : 1440px;
+$container-max-width      : 1140px;
 
 // Colors
 $white-color              : rgb(255, 255, 255);
 
 $main-text-color          : #4b4b4b;
-$secondary-text-color     : rgb(169, 169, 169); //silver-chalice
+$secondary-text-color     : #a9a9a9; //silver-chalice
 
 $main-action-color        : rgb(255, 109, 0); //blaze-orange
-$secondary-action-color   :rgba(75, 75, 75, 0.5);
+$secondary-action-color   :#4b4b4b80;
 
 $border-color             : rgb(221, 221, 221);
 

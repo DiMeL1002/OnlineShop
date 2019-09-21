@@ -1,0 +1,16 @@
+@import '~/static/utils/vars.scss';
+
+.product-rating {
+    display: flex;
+    align-items: center;
+
+    &__star {
+        width: 15px;
+        height: 15px;
+        fill: #dddddd;
+
+        &:not(:last-of-type) { margin-right: 5px; }
+
+        &_active { fill: $main-action-color; }
+    }
+}

@@ -22,6 +22,12 @@
     line-height: 1.67;
 }
 
+@mixin text-level-1-2 {
+    font-family: $main-bold-font;
+    font-size: 1.43rem;
+    line-height: 1.67;
+}
+
 @mixin text-level-2 {
     color: $main-text-color;
     font-family: $main-bold-font;

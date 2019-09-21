@@ -1,0 +1,44 @@
+@import '~/static/utils/vars.scss';
+@import '~/static/utils/mixins.scss';
+
+.product-pay {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media screen and (max-width: $phone-width) { display: none; }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &__icon {
+        widows: 35px;
+        height: 35px;
+        margin-right: 15px;
+    }
+
+    &__title { @include text-level-2; }
+
+    &__item {
+        position: relative;
+        padding-left: 10px; 
+
+        @include text-level-4;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 0px;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: $main-action-color;
+        }
+    }
+}

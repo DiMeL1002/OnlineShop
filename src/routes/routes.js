@@ -4,6 +4,8 @@ import Delivery from '~p/delivery/delivery'
 import Page404 from '~p/error404/error404'
 import Main from '~p/main/main'
 import News from '~p/news/news'
+import Products from '~p/products/products'
+import Product from '~p/product/product'
 import Stocks from '~p/stocks/stocks'
 import Warranties from '~p/warranties/warranties'
 import Wholesalers from '~p/wholesalers/wholesalers'
@@ -37,6 +39,18 @@ let routes = [
         name: 'news',
         url: '/news',
         component: News,
+        exact: true
+    },
+    {
+        name: 'products',
+        url: '/products',
+        component: Products,
+        exact: true
+    },
+    {
+        name: 'product',
+        url: '/product',
+        component: Product,
         exact: true
     },
     {

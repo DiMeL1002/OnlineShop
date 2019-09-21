@@ -32,11 +32,9 @@ export default class extends React.Component {
                     <MediaQuery maxDeviceWidth={576}>
                         <HeaderMobile />
                     </MediaQuery>
-                        <div className="container">
-                            <Switch>
-                                {routesComponents}
-                            </Switch>
-                        </div>
+                        <Switch>
+                            {routesComponents}
+                        </Switch>
                     </div>
                     <Footer />
                 </div>
