@@ -1,7 +1,7 @@
 @import '~/static/utils/vars.scss';
 @import '~/static/utils/mixins.scss';
 
-.delivery-page {
+.warranties-page {
     margin: 30px 0;
 
     &__title {
@@ -11,18 +11,6 @@
     }
 
     &__text { padding-bottom: 10px; }
-
-    &__title-h2 {
-        margin: 20px 0;
-
-        @include text-level-1-2;
-    }
-
-    &__table {
-        width: 100%;
-        margin-top: 20px;
-        margin-bottom: 40px;
-    }
 
     &__advantages { margin-top: 30px; }
 }
