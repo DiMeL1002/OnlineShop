@@ -1,13 +1,13 @@
 import React from 'react'
 
-import Advantages from '~c/advantages/advantages'
+import PageContainer from '~p/pageContainer/pageContainer'
 
 import './warranties.scss'
 
 export default function() {
     return (
-        <section className="warranties-page">
-            <div className="container">
+        <PageContainer>
+            <section className="warranties-page">
                 <h1 className="warranties-page__title">Гарантии</h1>
                 <p className="warranties-page__text">
                     Бесплатное сервисное обслуживание в течении 1-го года на любую технику 
@@ -30,10 +30,7 @@ export default function() {
                     обращении с техникой, если покупатель не выполнил требования производителя, 
                     данный случай не является гарантийным!
                 </p>
-                <div className="warranties-page__advantages">
-                    <Advantages />
-                </div>
-            </div>
-        </section>
+            </section>
+        </PageContainer>
     )
 }

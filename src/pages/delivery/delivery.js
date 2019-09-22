@@ -1,7 +1,7 @@
 import React from 'react'
 import MediaQuery from 'react-responsive'
 
-import Advantages from '~c/advantages/advantages'
+import PageContainer from '~p/pageContainer/pageContainer'
 
 import './delivery.scss'
 
@@ -45,8 +45,8 @@ export default function() {
     );
 
     return (
-        <section className="delivery-page">
-            <div className="container">
+        <PageContainer>
+            <section className="delivery-page">
                 <h1 className="delivery-page__title">Доставка и оплата</h1>
                 <p className="delivery-page__text">
                     Вы можете оформить заказ самостоятельно на сайте либо по телефону.
@@ -107,10 +107,7 @@ export default function() {
                     согласно п.3 ст.497 ГК РФ стоимость доставки в размере 400 рублей 
                     за выполненную работу курьера.
                 </p>
-                <div className="delivery-page__advantages">
-                    <Advantages />
-                </div>
-            </div>
-        </section>
+            </section>
+        </PageContainer>
     )
 }

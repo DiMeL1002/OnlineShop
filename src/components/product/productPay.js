@@ -4,7 +4,7 @@ import './productPay.scss';
 
 import PayIcon from '~/static/img/payment.svg';
 
-export default function productPay() {
+export default function() {
     return (
         <div className="product-pay">
             <div className="product-pay__header">

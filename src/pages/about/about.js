@@ -1,13 +1,13 @@
 import React from 'react'
 
-import Advantages from '~c/advantages/advantages'
+import PageContainer from '~p/pageContainer/pageContainer'
 
 import './about.scss'
 
 export default function() {
     return (
-        <section className="about-page">
-            <div className="container">
+        <PageContainer>
+            <section className="about-page">
                 <h1 className="about-page__title">О компании</h1>
                 <p>
                     Интернет-магазин Giant занимается продажей различных современных гаджетов. 
@@ -70,10 +70,7 @@ export default function() {
                         на высшем уровне.
                     </li>
                 </ul>
-                <div className="about-page__advantages">
-                    <Advantages />
-                </div>
-            </div>
-        </section>
+            </section>
+        </PageContainer>
     )
 }

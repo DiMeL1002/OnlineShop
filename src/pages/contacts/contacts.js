@@ -1,13 +1,13 @@
 import React from 'react'
 
-import Advantages from '~c/advantages/advantages'
+import PageContainer from '~p/pageContainer/pageContainer'
 
 import './contacts.scss'
 
 export default function() {
     return (
-        <section className="contacts-page">
-            <div className="container">
+        <PageContainer>
+            <section className="contacts-page">
                 <h1 className="contacts-page__title">Контакты</h1>
                 <p className="contacts-page__text">
                     <b>Телефон: </b>8(777) 777-77-77, 8(777) 777-77-77 (бесплатно по всей России)
@@ -24,10 +24,7 @@ export default function() {
                 <p className="contacts-page__text">
                     <b>Адрес: </b>г. Санкт-Петербург, Кушелевская дорога 7к3
                 </p>
-                <div className="contacts-page__advantages">
-                    <Advantages />
-                </div>
-            </div>
-        </section>
+            </section>
+        </PageContainer>
     )
 }

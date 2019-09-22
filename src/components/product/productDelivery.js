@@ -4,7 +4,7 @@ import './productDelivery.scss';
 
 import DeliveryIcon from '~/static/img/delivery.svg';
 
-export default function productPay() {
+export default function() {
     return (
         <div className="product-delivery">
             <div className="product-delivery__header">
