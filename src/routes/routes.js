@@ -6,6 +6,7 @@ import Main from '~p/main/main'
 import News from '~p/news/news'
 import Products from '~p/products/products'
 import Product from '~p/product/product'
+import Reviews from '~p/reviews/reviews'
 import Stocks from '~p/stocks/stocks'
 import Warranties from '~p/warranties/warranties'
 import Wholesalers from '~p/wholesalers/wholesalers'
@@ -54,6 +55,12 @@ let routes = [
         exact: true
     },
     {
+        name: 'reviews',
+        url: '/reviews',
+        component: Reviews,
+        exact: true
+    },
+    {
         name: 'stocks',
         url: '/stocks',
         component: Stocks,
@@ -74,7 +81,7 @@ let routes = [
     {
         url: '**',
         component: Page404,
-    }
+    },
 ]
 
 let routesMap = {};

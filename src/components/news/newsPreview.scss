@@ -51,8 +51,9 @@
         transition: all linear .3s;
     }
 
+    &__footer { margin-top: auto; }
+
     &__link {
-        margin-top: auto;
         text-decoration: underline;
         cursor: pointer;
 

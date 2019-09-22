@@ -1,0 +1,19 @@
+@import '~/static/utils/vars.scss';
+@import '~/static/utils/mixins.scss';
+
+.reviews-page {
+    &__title {
+        margin-bottom: 20px;
+
+        @include text-level-1;
+    }
+
+    &__review { margin-bottom: 50px; }
+
+    &__date { margin-bottom: 15px; }
+
+    &__name {
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+}

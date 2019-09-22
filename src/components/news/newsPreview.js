@@ -16,7 +16,9 @@ export default function() {
                     <span className="news-preview__text">Чехол в подарок</span>
                 </a>
             </div>
-            <a className="news-preview__link">Все новости</a>
+            <div className="news-preview__footer">
+                <a className="news-preview__link">Все новости</a>
+            </div>
         </div>
     )
 }

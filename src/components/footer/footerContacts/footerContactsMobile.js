@@ -13,8 +13,8 @@ export default function() {
             </div>
             <div className="footer-contacts-mobile__items">
                 <span className="footer-contacts-mobile__text">8 (777) 777-77-77</span>
-                <a className="footer-contacts-mobile__email" href="mailto:sale@online-mag.ru">
-                    sale@online-mag.ru
+                <a className="footer-contacts-mobile__email" href="mailto:sale@giant.ru">
+                    sale@giant.ru
                 </a>
             </div>
         </div>

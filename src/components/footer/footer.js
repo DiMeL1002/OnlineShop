@@ -32,7 +32,7 @@ export default function() {
             <div className="footer__bottom">
                 <div className="container">
                     <span className="footer__copyright">
-                        © 2010-2019 «Online-Mag». Все права защищены. Информация сайта защищена законом об авторских правах.
+                        © 2010-2019 «Giant». Все права защищены. Информация сайта защищена законом об авторских правах.
                     </span>
                 </div>
             </div>

@@ -14,7 +14,9 @@ export default function() {
                 </span>
                 <span className="reviews-preview__author">Павел</span>
             </div>
-            <a className="reviews-preview__link">Все отзывы</a>
+            <div className="reviews-preview__footer">
+                <a className="reviews-preview__link">Все отзывы</a>
+            </div>
         </div>
     )
 }

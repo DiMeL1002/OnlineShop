@@ -16,8 +16,8 @@ export default function() {
                 <span>г. Санкт-Петербург,</span>
                 <span>Кушелевская дорога 7к3</span>
             </span>
-            <a className="footer-contacts__email" href="mailto:sale@online-mag.ru">
-                sale@online-mag.ru
+            <a className="footer-contacts__email" href="mailto:sale@giant.ru">
+                sale@giant.ru
             </a>
         </div>
     )

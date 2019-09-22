@@ -46,18 +46,13 @@ export default function() {
                         </Link>
                     </li>
                     <li className="footer-nav__item">
-                        <Link className="footer-nav__link" to={routesMap.warranties}>
+                        <Link className="footer-nav__link" to={routesMap.reviews}>
                             Отзывы
                         </Link>
                     </li>
                     <li className="footer-nav__item">
                         <Link className="footer-nav__link" to={routesMap.contacts}>
                             Контакты
-                        </Link>
-                    </li>
-                    <li className="footer-nav__item">
-                        <Link className="footer-nav__link" to={routesMap.contacts}>
-                            Вопрос-ответ
                         </Link>
                     </li>
                 </ul>
