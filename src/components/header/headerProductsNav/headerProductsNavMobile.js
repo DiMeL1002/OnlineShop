@@ -16,6 +16,34 @@ export default class extends React.Component {
     }
 
     render() {
+        let catalogItemsData = getCatalogItemsData();
+        let catalogItems = [];
+
+        catalogItemsData.forEach((item) => {
+            catalogItems.push (
+                <li className="main-nav-mobile__catalog-item"
+                    key={`main-catalog-item-${item.name}`}
+                >
+                    <Link className="main-nav-mobile__catalog-link" to={item.routerTo}>
+                        {item.name}
+                    </Link>
+                </li>
+            )
+        });
+
+        let pagesData = getPagesData();
+        let pages = [];
+
+        pagesData.forEach((item) => {
+            pages.push (
+                <li className="main-nav-mobile__info-item" key={`main-page-${item.name}`}>
+                    <Link className="main-nav-mobile__info-link" to={item.routerTo}>
+                        {item.name}
+                    </Link>
+                </li>
+            )
+        });
+
         return (
             <div className="main-nav-mobile">
                 <div className="main-nav-mobile__header">
@@ -27,77 +55,70 @@ export default class extends React.Component {
                 <div className="main-nav-mobile__body">
                     <nav className="main-nav-mobile__catalog">
                         <ul className="main-nav-mobile__catalog-list">
-                            <li className="main-nav-mobile__catalog-item">
-                                <a className="main-nav-mobile__catalog-link">Телефоны</a>
-                            </li>
-                            <li className="main-nav-mobile__catalog-item">
-                                <a className="main-nav-mobile__catalog-link">Планшеты</a>
-                            </li>
-                            <li className="main-nav-mobile__catalog-item">
-                                <a className="main-nav-mobile__catalog-link">Часы</a>
-                            </li>
-                            <li className="main-nav-mobile__catalog-item">
-                                <a className="main-nav-mobile__catalog-link">
-                                    Аксессуары
-                                </a>
-                            </li>
+                            {catalogItems}
                         </ul>
                     </nav>
                     <nav className="main-nav-mobile__info">
                         <ul className="main-nav-mobile__info-list">
-                            <li className="main-nav-mobile__info-item">
-                                <Link className="main-nav-mobile__info-link"
-                                      to={routesMap.about}
-                                >
-                                    О компании
-                                </Link>
-                            </li>
-                            <li className="main-nav-mobile__info-item">
-                                <Link className="main-nav-mobile__info-link"
-                                      to={routesMap.delivery}
-                                >
-                                    Доставка и оплата
-                                </Link>
-                            </li>
-                            <li className="main-nav-mobile__info-item">
-                                <Link className="main-nav-mobile__info-link"
-                                      to={routesMap.stocks}
-                                >
-                                    Акции
-                                </Link>
-                            </li>
-                            <li className="main-nav-mobile__info-item">
-                                <Link className="main-nav-mobile__info-link"
-                                      to={routesMap.wholesalers}
-                                >
-                                    Поставщикам
-                                </Link>
-                            </li>
-                            <li className="main-nav-mobile__info-item">
-                                <Link className="main-nav-mobile__info-link"
-                                      to={routesMap.news}
-                                >
-                                    Новости
-                                </Link>
-                            </li>
-                            <li className="main-nav-mobile__info-item">
-                                <Link className="main-nav-mobile__info-link"
-                                      to={routesMap.warranties}
-                                >
-                                    Гарантии
-                                </Link>
-                            </li>
-                            <li className="main-nav-mobile__info-item">
-                                <Link className="main-nav-mobile__info-link"
-                                      to={routesMap.contacts}
-                                >
-                                    Контакты
-                                </Link>
-                            </li>
+                            {pages}
                         </ul>
                     </nav>
                 </div>
             </div>
         )
     }
+}
+
+function getCatalogItemsData() {
+    return [
+        {
+            name: 'Телефоны',
+            routerTo: routesMap.products,
+        },
+        {
+            name: 'Планшеты',
+            routerTo: routesMap.products,
+        },
+        {
+            name: 'Часы',
+            routerTo: routesMap.products,
+        },
+        {
+            name: 'Аксессуары',
+            routerTo: routesMap.products,
+        },
+    ];
+}
+
+function getPagesData() {
+    return [
+        {
+            name: 'О компании',
+            routerTo: routesMap.about,
+        },
+        {
+            name: 'Доставка и оплата',
+            routerTo: routesMap.delivery,
+        },
+        {
+            name: 'Акции',
+            routerTo: routesMap.stocks,
+        },
+        {
+            name: 'Поставщикам',
+            routerTo: routesMap.wholesalers,
+        },
+        {
+            name: 'Новости',
+            routerTo: routesMap.news,
+        },
+        {
+            name: 'Гарантии',
+            routerTo: routesMap.warranties,
+        },
+        {
+            name: 'Контакты',
+            routerTo: routesMap.contacts,
+        },
+    ]
 }

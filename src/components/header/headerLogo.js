@@ -9,7 +9,7 @@ export default function() {
         <div className="logo">
             <Link className="logo__link" to={routesMap.home}>
                 <img className="logo__img"
-                    src="./img/logo.png"
+                    src="/img/logo.png"
                     alt="Логотип Giant"
                 ></img>
             </Link>

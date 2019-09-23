@@ -13,17 +13,17 @@ export default class extends React.Component {
             <section className="product-info">
                 <div className="product-info__img-wrapper">
                     <img className="product-info__img"
-                         src="./img/products/product1.webp"
-                         alt="Трехколесный Самокат Mini Micro Желтый"
+                         src={this.props.img}
+                         alt={this.props.name}
                     />
                 </div>
                 <div className="product-info__description">
                     <div className="product-info__row">
                         <h1 className="product-info__name">
-                            Xiaomi Mi A3 4/64GB Android One
+                            {this.props.name}
                         </h1>
                         <img className="product-info__logo"
-                             src="./img/brands/xiaomi.jpg"
+                             src="/img/brands/xiaomi.jpg"
                              alt="Логотип производителя"
                         />
                     </div>
@@ -37,7 +37,7 @@ export default class extends React.Component {
                         <span className="product-info__articul">Артикул: <b>MM0009</b></span>
                     </div>
                     <div className="product-info__row product-info__row_buttons">
-                        <span className="product-info__price">10 000 руб.</span>
+                        <span className="product-info__price">{this.props.price}</span>
                         <div className="product-info__buttons">
                             <div className="product-info__button-buy">
                                 <Button type="button" text="Купить" />

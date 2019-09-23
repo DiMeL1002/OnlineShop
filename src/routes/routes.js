@@ -50,7 +50,7 @@ let routes = [
     },
     {
         name: 'product',
-        url: '/product',
+        url: '/product/:id',
         component: Product,
         exact: true
     },
@@ -97,7 +97,7 @@ let urlBuilder = function(name, params) {
         return null;
     }
 
-    let url = routes[name];
+    let url = routesMap[name]; // news/:id
 
     for (let key in params) {
         url = url.replace(':' + key, params[key]);

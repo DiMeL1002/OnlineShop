@@ -1,11 +1,26 @@
 import React from 'react'
+import { inject } from 'mobx-react';
+import { urlBuilder } from '~/routes/routes';
 
 import ProductCart from '~c/product/productCart'
 
 import './products.scss'
 
-export default class extends React.Component {
+@inject('stores')export default class extends React.Component {
     render() {
+        let phonesData = this.props.stores.phones;
+
+        let phones = phonesData.items.map((phone) => {
+            return (
+                    <ProductCart name={phone.name}
+                                 price={phone.price}
+                                 img={phone.img}
+                                 link={urlBuilder('product', {id: phone.id})}
+                                 key={`phone-${phone.id}`}
+                    />
+            )
+        })
+
         return (
             <section className="products">
                 <div className="container">
@@ -16,24 +31,7 @@ export default class extends React.Component {
                         <aside className="products__filter"></aside>
                         <div className="products__main">
                             <div className="products__catalog">
-                                <div className="products__item">
-                                    <ProductCart />
-                                </div>
-                                <div className="products__item">
-                                    <ProductCart />
-                                </div>
-                                <div className="products__item">
-                                    <ProductCart />
-                                </div>
-                                <div className="products__item">
-                                    <ProductCart />
-                                </div>
-                                <div className="products__item">
-                                    <ProductCart />
-                                </div>
-                                <div className="products__item">
-                                    <ProductCart />
-                                </div>
+                                {phones}
                             </div>
                         </div>
                     </div>

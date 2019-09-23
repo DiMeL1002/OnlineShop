@@ -42,6 +42,8 @@
         padding: 10px 15px;
     }
 
+    &__catalog-link { color: inherit; }
+
     &__info {
         padding: 15px;
         background-color: $header-bg;

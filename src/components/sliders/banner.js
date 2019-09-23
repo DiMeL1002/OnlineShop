@@ -7,25 +7,6 @@ import PrevIcon from '~/static/img/banner-prev.svg';
 import NextIcon from '~/static/img/banner-next.svg';
 
 export default class extends React.Component {
-    state = {
-        banners: [
-            {
-                title: "Xiaomi Mi Band 3",
-                description: "Лучший фитнес браслет 2019 года",
-                img: "./img/banner/banner1.png",
-            },
-            {
-                title: "Samsung Galaxy Tab A 10.1 SM-T515",
-                description: "Доступный и стильный",
-                img: "./img/banner/banner2.png",
-            },
-            {
-                title: "Xiaomi Redmi Note 7",
-                description: "Лучший бюджетный телефон",
-                img: "./img/banner/banner3.png",
-            },
-        ]
-    }
 
     setSliderRef = (element) => {
         this.slider = element;
@@ -50,11 +31,12 @@ export default class extends React.Component {
             customPaging: i => (
                 <button className="banner__dot"></button>
             ),
-          };
+        };
 
+        let slidesData = getSlidesData();
         let slides = [];
 
-          this.state.banners.forEach((banner) => {
+        slidesData.forEach((banner) => {
             slides.push(
                 <div key={`slide-${banner.title}`}>
                     <div className="banner__slide">
@@ -68,7 +50,7 @@ export default class extends React.Component {
                     </div>
                 </div>
             )
-          })
+        })
 
         return (
             <div className="banner">
@@ -84,4 +66,24 @@ export default class extends React.Component {
             </div>
         )
     }
+}
+
+function getSlidesData() {
+    return [
+        {
+            title: "Xiaomi Mi Band 3",
+            description: "Лучший фитнес браслет 2019 года",
+            img: "./img/banner/banner1.png",
+        },
+        {
+            title: "Samsung Galaxy Tab A 10.1 SM-T515",
+            description: "Доступный и стильный",
+            img: "./img/banner/banner2.png",
+        },
+        {
+            title: "Xiaomi Redmi Note 7",
+            description: "Лучший бюджетный телефон",
+            img: "./img/banner/banner3.png",
+        },
+    ]
 }

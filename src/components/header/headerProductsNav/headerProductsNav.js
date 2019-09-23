@@ -5,24 +5,45 @@ import { routesMap } from '~/routes/routes';
 import './headerProductsNav.scss'
 
 export default function() {
+    let catalogItemsData = getCatalogItemsData();
+    let catalogItems = [];
+
+    catalogItemsData.forEach((item) => {
+        catalogItems.push (
+            <li className="main-nav__item" key={`main-catalog-item-${item.name}`}>
+                <Link className="main-nav__link" to={item.routerTo}>
+                    {item.name}
+                </Link>
+            </li>
+        )
+    });
+
     return (
         <nav className="main-nav">
             <ul className="main-nav__list">
-                <li className="main-nav__item">
-                    <Link className="main-nav__link" to={routesMap.products}>
-                        Телефоны
-                    </Link>
-                </li>
-                <li className="main-nav__item">
-                    <a className="main-nav__link">Планшеты</a>
-                </li>
-                <li className="main-nav__item">
-                    <a className="main-nav__link">Часы</a>
-                </li>
-                <li className="main-nav__item">
-                    <a className="main-nav__link">Аксессуары</a>
-                </li>
+                {catalogItems}
             </ul>
         </nav>
     )
+}
+
+function getCatalogItemsData() {
+    return [
+        {
+            name: 'Телефоны',
+            routerTo: routesMap.products,
+        },
+        {
+            name: 'Планшеты',
+            routerTo: routesMap.products,
+        },
+        {
+            name: 'Часы',
+            routerTo: routesMap.products,
+        },
+        {
+            name: 'Аксессуары',
+            routerTo: routesMap.products,
+        },
+    ];
 }
