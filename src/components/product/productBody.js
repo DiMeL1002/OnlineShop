@@ -1,4 +1,5 @@
 import React from 'react'
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 import Advantages from '~c/advantages/advantages'
 import ProductCharacteristics from '~c/product/productCharacteristics'
@@ -55,7 +56,14 @@ export default class extends React.Component {
                     </div>
                 </header>
                 <div className="product-body__body">
-                    {this.state.showedMenu}
+                    <TransitionGroup>
+                        <CSSTransition classNames="product-body__description"
+                                       timeout={500}
+                                       key={Math.random()}
+                        >
+                            {this.state.showedMenu}
+                        </CSSTransition>
+                    </TransitionGroup>
                 </div>
                 <Advantages />
             </section>

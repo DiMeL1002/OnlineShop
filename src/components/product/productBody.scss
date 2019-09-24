@@ -47,4 +47,11 @@
         padding-left: 20px;
         margin-bottom: 100px;
     }
+
+    &__description-enter { opacity: 0; }
+    &__description-enter-active {
+        opacity: 1;
+        transition: opacity 500ms ease-in;
+    }
+    &__description-exit { opacity: 0; }
 }
