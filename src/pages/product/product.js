@@ -1,7 +1,8 @@
 import React from 'react'
-import {observer, inject} from 'mobx-react';
+import { inject } from 'mobx-react';
 
 import ProductInfo from '~c/product/productInfo'
+import ProductBody from '~c/product/productBody'
 
 import './product.scss'
 
@@ -24,7 +25,7 @@ import './product.scss'
                         />
                     </div>
                     <div className="product__body">
-                        
+                        <ProductBody />
                     </div>
                 </div>
             </main>

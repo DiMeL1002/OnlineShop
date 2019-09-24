@@ -42,6 +42,13 @@
     line-height: 1.88;
 }
 
+@mixin text-level-2-action {
+    color: $main-action-color;
+    font-family: $main-bold-font;
+    font-size: 1.14rem;
+    line-height: 1.88;
+}
+
 // @mixin text-level-3 {
 //     color: $dark-shade-100;
 //     font-family: $main-bold-font;

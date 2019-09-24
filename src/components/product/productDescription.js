@@ -2,19 +2,32 @@ import React from 'react'
 
 import './productDescription.scss'
 
-export default class extends React.Component {
-    render() {
-        return (
-            <section className="product-description">
-                <header className="product-description__header">
-                    <div className="product-description__nav">
-                        <ul className="product-description__list">
-                            
-                        </ul>
-                    </div>
-                </header>
-                <div className="product-description__body"></div>
-            </section>
+export default function() {
+    let DescriptionData = getDescriptionData();
+    let descriptions = [];
+
+    for (let key in DescriptionData) {
+        descriptions.push (
+            <li className="product-description__item" key={`product-description-${key}`}>
+                <p><b>{`${key}: `}</b>{DescriptionData[key]}</p>
+            </li>
         )
+    }
+
+    return (
+        <div className="product-description">
+            <h2 className="product-description__title">Описание</h2>
+            <ul className="product-description__list">
+                {descriptions}
+            </ul>
+        </div>
+    )
+}
+
+function getDescriptionData() {
+    return {
+        'Тип': 'смартфон',
+        'Кол-во SIM-карт': '2, nano SIM',
+        'Экран': '6.67 дюйм., 3120x1440',
     }
 }
