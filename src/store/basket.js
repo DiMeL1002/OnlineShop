@@ -19,11 +19,23 @@ export default class {
         this.products.push({id, count: 1});
     }
 
+    @action change(id, count) {
+        let index = this.findIndex(id);
+
+        if (index !== -1) {
+            this.products[index].count = count;
+        }
+    }
+
     @action remove(id) {
-        let index = this.products.findIndex((product) => product.id === id);
+        let index = this.findIndex(id);
 
         if(index !== -1) {
             this.products.splice(index, 1);
         }
+    }
+
+    findIndex(id) {
+        return this.products.findIndex((product) => product.id === id);
     }
 }
