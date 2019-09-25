@@ -27,7 +27,7 @@ import './productCart.scss'
                 <Button type="button"
                         text="В корзину"
                         theme="reverse"
-                        onClick={() => basket.add(product.id)}
+                        onClick={() => basket.addProduct(product.id)}
                 />
             </div>
         )

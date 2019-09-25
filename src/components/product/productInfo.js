@@ -49,7 +49,7 @@ import './productInfo.scss'
                             <div className="product-info__button-buy">
                                 <Button type="button"
                                         text="В корзину"
-                                        onClick={() => basket.add(product.id)}
+                                        onClick={() => basket.addProduct(product.id)}
                                 />
                             </div>
                             <div className="product-info__button-buy-click">

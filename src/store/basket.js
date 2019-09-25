@@ -15,11 +15,11 @@ export default class {
         })
     }
 
-    @action add(id) {
+    @action addProduct(id) {
         this.products.push({id, count: 1});
     }
 
-    @action change(id, count) {
+    @action changeProductCount(id, count) {
         let index = this.findIndex(id);
 
         if (index !== -1) {
@@ -27,7 +27,7 @@ export default class {
         }
     }
 
-    @action remove(id) {
+    @action removeProduct(id) {
         let index = this.findIndex(id);
 
         if(index !== -1) {

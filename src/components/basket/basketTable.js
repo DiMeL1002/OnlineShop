@@ -11,13 +11,13 @@ import MinusIcon from "~/static/img/minus.svg";
 
     increaseProductCount = (id, count) => {
         count++;
-        this.props.stores.basket.change(id, count++);
+        this.props.stores.basket.changeProductCount(id, count++);
     }
 
     reduceProductCount = (id, count) => {
         if (count > 1) {
             count--;
-            this.props.stores.basket.change(id, count);
+            this.props.stores.basket.changeProductCount(id, count);
         }
     }
 
@@ -52,7 +52,7 @@ import MinusIcon from "~/static/img/minus.svg";
                     </div>
                     <div className="basket-table__full-price">10 000 руб.</div>
                     <div className="basket-table__remove"
-                         onClick={() => basket.remove(product.id)}
+                         onClick={() => basket.removeProduct(product.id)}
                     >
                         <CloseIcon className="basket-table__remove-icon" />
                     </div>
