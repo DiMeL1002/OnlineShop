@@ -25,7 +25,7 @@ export default class extends React.Component {
                     </span>
                 </Link>
                 <span className="product-cart__price">{this.props.price}</span>
-                <Button type="button" text="Купить" theme="reverse" />
+                <Button type="button" text="В корзину" theme="reverse" />
             </div>
         )
     }
