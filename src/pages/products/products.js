@@ -1,24 +1,16 @@
 import React from 'react'
 import { inject } from 'mobx-react';
-import { urlBuilder } from '~/routes/routes';
 
 import ProductCart from '~c/product/productCart'
 
 import './products.scss'
 
-@inject('stores')export default class extends React.Component {
+@inject('stores') export default class extends React.Component {
     render() {
         let phonesData = this.props.stores.phones;
 
         let phones = phonesData.items.map((phone) => {
-            return (
-                    <ProductCart name={phone.name}
-                                 price={phone.price}
-                                 img={phone.img}
-                                 link={urlBuilder('product', {id: phone.id})}
-                                 key={`phone-${phone.id}`}
-                    />
-            )
+            return <ProductCart productId={phone.id} key={`phone-${phone.id}`} />
         })
 
         return (

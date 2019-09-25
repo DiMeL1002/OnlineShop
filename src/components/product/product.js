@@ -6,21 +6,21 @@ import ProductBody from '~c/product/productBody'
 
 import './product.scss'
 
-export default class extends React.Component {
-    static propTypes = { productId: PropTypes.number.isRequired }
-
-    render() {
-        return (
-            <main className="product">
-                <div className="container">
-                    <div className="product__header">
-                        <ProductInfo productId={this.props.productId} />
-                    </div>
-                    <div className="product__body">
-                        <ProductBody />
-                    </div>
+function Product(props) {
+    return (
+        <main className="product">
+            <div className="container">
+                <div className="product__header">
+                    <ProductInfo productId={props.productId} />
                 </div>
-            </main>
-        )
-    }
+                <div className="product__body">
+                    <ProductBody />
+                </div>
+            </div>
+        </main>
+    )
 }
+
+Product.propTypes = { productId: PropTypes.number.isRequired };
+
+export default Product;

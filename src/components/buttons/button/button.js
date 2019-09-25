@@ -7,6 +7,7 @@ export default class extends React.Component {
     static defaultProps = {
         theme: '',
         size: '',
+        onClick: () => {},
     }
 
     static propTypes = {
@@ -14,6 +15,7 @@ export default class extends React.Component {
         text: PropTypes.string.isRequired,
         theme: PropTypes.string,
         size: PropTypes.string,
+        onClick: PropTypes.func,
     }
     
     render() {
@@ -39,7 +41,10 @@ export default class extends React.Component {
 
         return (
             <React.Fragment>
-                <button className={className} type={this.props.type}>
+                <button className={className}
+                        type={this.props.type}
+                        onClick={this.props.onClick}
+                >
                     {this.props.text}
                 </button>
             </React.Fragment>

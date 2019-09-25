@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { inject } from 'mobx-react';
+import {observer, inject} from 'mobx-react';
 
 import Button from '~c/buttons/button/button'
 import ProductRating from '~c/product/productRating'
@@ -9,11 +9,12 @@ import ProductDelivery from '~c/product/productDelivery'
 
 import './productInfo.scss'
 
-@inject('stores') export default class extends React.Component {
+@inject('stores') @observer class ProductInfo extends React.Component {
     static propTypes = { productId: PropTypes.number.isRequired }
 
     render() {
         let product = this.props.stores.phones.getById(this.props.productId);
+        let basket = this.props.stores.basket;
 
         return (
             <section className="product-info">
@@ -34,7 +35,7 @@ import './productInfo.scss'
                     <div className="product-info__row">
                         <div className="product-info__rating">
                             <div className="product-info__product-rating">
-                                <ProductRating rating={product.rating}/>
+                                <ProductRating rating={product.rating} />
                             </div>
                             <a>0 отзывов</a>
                         </div>
@@ -46,7 +47,10 @@ import './productInfo.scss'
                         <span className="product-info__price">{product.price}</span>
                         <div className="product-info__buttons">
                             <div className="product-info__button-buy">
-                                <Button type="button" text="Купить" />
+                                <Button type="button"
+                                        text="В корзину"
+                                        onClick={() => basket.add(product.id)}
+                                />
                             </div>
                             <div className="product-info__button-buy-click">
                                 <Button type="button" text="Купить в 1 клик" theme="gray" />
@@ -62,3 +66,5 @@ import './productInfo.scss'
         )
     }
 }
+
+export default ProductInfo;
