@@ -1,0 +1,8 @@
+.basket {
+    &__table { margin-bottom: 50px; }
+
+    &__total {
+        display: flex;
+        justify-content: flex-end;
+    }
+}

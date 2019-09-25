@@ -1,4 +1,5 @@
 import About from '~p/about/about'
+import Basket from '~p/basket/basket'
 import Contacts from '~p/contacts/contacts'
 import Delivery from '~p/delivery/delivery'
 import Page404 from '~p/error404/error404'
@@ -22,6 +23,12 @@ let routes = [
         name: 'about',
         url: '/about',
         component: About,
+        exact: true
+    },
+    {
+        name: 'basket',
+        url: '/basket',
+        component: Basket,
         exact: true
     },
     {

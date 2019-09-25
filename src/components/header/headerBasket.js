@@ -1,12 +1,19 @@
 import React from 'react'
+import { withRouter } from 'react-router-dom'
+
+import { routesMap } from '~/routes/routes';
 
 import './headerBasket.scss'
 
 import BasketIcon from "~/static/img/basket.svg";
 
-export default function() {
+const headerBasket = function(props) {
+    let goToBasket = () => {
+        props.history.push(routesMap.basket);
+    }
+
     return (
-        <div className="header-basket">
+        <div className="header-basket" onClick={goToBasket}>
             <div className="header-basket__goods">
                 <span className="header-basket__price">0 &#8381;</span>
                 <span className="header-basket__count">0 товаров</span>
@@ -18,3 +25,5 @@ export default function() {
         </div>
     )
 }
+
+export default withRouter(headerBasket);

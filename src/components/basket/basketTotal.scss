@@ -1,0 +1,26 @@
+@import '~/static/utils/vars.scss';
+@import '~/static/utils/mixins.scss';
+
+.basket-total {
+    &__row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 6px;
+
+        @include text-level-5;
+
+        &_full {
+            color: inherit;
+            
+            @include text-level-1-2;
+        }
+    }
+
+    &__label {
+        display: inline-block;
+        width: 100px;
+        flex: 0 0 80px;
+        margin-right: 40px;
+        text-align: right;
+    }
+}

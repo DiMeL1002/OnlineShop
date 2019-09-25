@@ -1,0 +1,12 @@
+@import '~/static/utils/vars.scss';
+@import '~/static/utils/mixins.scss';
+
+.basket-page {
+    padding: 30px 0;
+
+    &__title {
+        margin-bottom: 20px;
+
+        @include text-level-1;
+    }
+}
