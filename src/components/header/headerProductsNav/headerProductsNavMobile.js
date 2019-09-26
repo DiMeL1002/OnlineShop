@@ -15,6 +15,12 @@ export default class extends React.Component {
         this.props.hideMenu();
     }
 
+    clickOnMenu = (e) => {
+        if (e.target.tagName === 'A') {
+            this.props.hideMenu();
+        }
+    }
+
     render() {
         let catalogItemsData = getCatalogItemsData();
         let catalogItems = [];
@@ -45,7 +51,7 @@ export default class extends React.Component {
         });
 
         return (
-            <div className="main-nav-mobile">
+            <div className="main-nav-mobile" onClick={() => this.clickOnMenu(event)}>
                 <div className="main-nav-mobile__header">
                     <span className="main-nav-mobile__menu-title">Меню</span>
                     <div className="main-nav-mobile__close" onClick={this.handleClick}>
