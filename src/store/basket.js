@@ -15,8 +15,24 @@ export default class {
         })
     }
 
+    @computed get totalPrice() {
+        let totalPrice = this.productsDetailed.reduce((total, product) => {
+            let price = product.price.replace(/[^+\d]/g, '');
+
+            return total + price * product.count;
+        }, 0)
+
+        totalPrice = String(totalPrice).replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');
+
+        return (`${totalPrice} руб.`);
+    }
+
     @action addProduct(id) {
-        this.products.push({id, count: 1});
+        let index = this.findIndex(id);
+
+        if (index === -1) {
+            this.products.push({id, count: 1});
+        }
     }
 
     @action changeProductCount(id, count) {

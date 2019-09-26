@@ -8,10 +8,9 @@ import PlusIcon from "~/static/img/plus.svg";
 import MinusIcon from "~/static/img/minus.svg";
 
 @inject('stores') @observer class BasketTable extends React.Component {
-
     increaseProductCount = (id, count) => {
         count++;
-        this.props.stores.basket.changeProductCount(id, count++);
+        this.props.stores.basket.changeProductCount(id, count);
     }
 
     reduceProductCount = (id, count) => {
@@ -23,8 +22,12 @@ import MinusIcon from "~/static/img/minus.svg";
 
     render() {
         let basket = this.props.stores.basket;
-
+        
         let products = basket.productsDetailed.map((product) => {
+            let price = product.price.replace(/[^+\d]/g, '');
+            let totalPrice = String(price * product.count);
+            totalPrice = totalPrice.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');
+
             return (
                 <div className="basket-table__item" key={`product-${product.id}`}>
                     <div className="basket-table__preview">
@@ -50,7 +53,9 @@ import MinusIcon from "~/static/img/minus.svg";
                             <PlusIcon className="basket-table__plus-icon" />
                         </div>
                     </div>
-                    <div className="basket-table__full-price">10 000 руб.</div>
+                    <div className="basket-table__full-price">
+                        {`${totalPrice} руб.`}
+                    </div>
                     <div className="basket-table__remove"
                          onClick={() => basket.removeProduct(product.id)}
                     >
