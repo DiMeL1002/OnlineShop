@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { withRouter } from 'react-router-dom';
 import {observer, inject} from 'mobx-react';
 
+import { routesMap } from '~/routes/routes';
 import Button from '~c/buttons/button/button'
 import ProductRating from '~c/product/productRating'
 import ProductPay from '~c/product/productPay'
@@ -12,9 +14,32 @@ import './productInfo.scss'
 @inject('stores') @observer class ProductInfo extends React.Component {
     static propTypes = { productId: PropTypes.number.isRequired }
 
+    goToBasket = () => {
+        this.props.history.push(routesMap.basket);
+    }
+
     render() {
         let product = this.props.stores.phones.getById(this.props.productId);
         let basket = this.props.stores.basket;
+
+        let button;
+
+        if (basket.isProductInBasket(product.id)) {
+            button = (
+                <Button type="button"
+                        text="В корзине"
+                        theme="gray"
+                        onClick={this.goToBasket}
+                />
+            )
+        } else {
+            button = (
+                <Button type="button"
+                        text="В корзину"
+                        onClick={() => basket.addProduct(product.id)}
+                />
+            )
+        }
 
         return (
             <section className="product-info">
@@ -47,10 +72,7 @@ import './productInfo.scss'
                         <span className="product-info__price">{product.price}</span>
                         <div className="product-info__buttons">
                             <div className="product-info__button-buy">
-                                <Button type="button"
-                                        text="В корзину"
-                                        onClick={() => basket.addProduct(product.id)}
-                                />
+                                {button}
                             </div>
                             <div className="product-info__button-buy-click">
                                 <Button type="button" text="Купить в 1 клик" theme="gray" />
@@ -67,4 +89,4 @@ import './productInfo.scss'
     }
 }
 
-export default ProductInfo;
+export default withRouter(ProductInfo);

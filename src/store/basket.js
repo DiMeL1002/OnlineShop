@@ -27,6 +27,10 @@ export default class {
         return (`${totalPrice} руб.`);
     }
 
+    @computed get isProductInBasket() {
+        return (id) => this.products.some((product) => product.id === id);
+    }
+
     @action addProduct(id) {
         let index = this.findIndex(id);
 
@@ -46,7 +50,7 @@ export default class {
     @action removeProduct(id) {
         let index = this.findIndex(id);
 
-        if(index !== -1) {
+        if (index !== -1) {
             this.products.splice(index, 1);
         }
     }

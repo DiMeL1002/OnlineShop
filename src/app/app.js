@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import MediaQuery from 'react-responsive'
-import { Provider } from 'mobx-react';
+import {observer, Provider} from 'mobx-react';
 
 import routes from '~/routes/routes'
 import stores from '~s/main'
@@ -12,7 +12,7 @@ import Footer from '~c/footer/footer'
 
 import './app.scss'
 
-export default class extends React.Component {
+@observer class App extends React.Component {
     render() {
         let routesComponents = routes.map((route) => {
             return ( 
@@ -46,3 +46,5 @@ export default class extends React.Component {
         );
     }
 }
+
+export default App;
