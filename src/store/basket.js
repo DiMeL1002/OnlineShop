@@ -24,7 +24,7 @@ export default class {
 
         totalPrice = String(totalPrice).replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');
 
-        return (`${totalPrice} руб.`);
+        return totalPrice;
     }
 
     @computed get isProductInBasket() {

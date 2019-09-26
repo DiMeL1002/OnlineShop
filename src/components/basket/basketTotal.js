@@ -18,7 +18,7 @@ import './basketTotal.scss'
                 <div className="basket-total__row basket-total__row_full">
                     <span className="basket-total__label">Итого:</span>
                     <span className="basket-total__value">
-                        {this.props.stores.basket.totalPrice}
+                        {`${this.props.stores.basket.totalPrice} руб.`}
                     </span>
                 </div>
             </div>
