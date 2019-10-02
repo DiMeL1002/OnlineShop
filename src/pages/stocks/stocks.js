@@ -1,9 +1,18 @@
 import React from 'react'
 
-export default class extends React.Component {
-    render() {
-        return (
-            <div>Акции</div>
-        )
-    }
+import PageContainer from '~p/pageContainer/pageContainer'
+
+import './stocks.scss'
+
+export default function() {
+    return (
+        <PageContainer>
+            <section className="stocks">
+                <h1 className="stocks__title">Акции</h1>
+                <div className="products__body">
+                    <p>В данный момент нет никаких акций.</p>
+                </div>
+            </section>
+        </PageContainer>
+    )
 }
