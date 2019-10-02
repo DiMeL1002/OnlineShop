@@ -1,13 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
-import {routesMap} from '~/routes/routes';
+import { inject, observer } from 'mobx-react';
 
 import Sandwich from '~c/buttons/sandwich/sandwich'
+import { urlBuilder } from '~/routes/routes';
 
 import './headerProductsNavMobile.scss'
 
-export default class extends React.Component {
+@inject('stores') @observer class headerProductsNavMobile extends React.Component {
 
     static propTypes = { hideMenu: PropTypes.func.isRequired }
 
@@ -22,7 +23,7 @@ export default class extends React.Component {
     }
 
     render() {
-        let catalogItemsData = getCatalogItemsData();
+        let catalogItemsData = this.props.stores.catalogItems.items;
         let catalogItems = [];
 
         catalogItemsData.forEach((item) => {
@@ -30,14 +31,16 @@ export default class extends React.Component {
                 <li className="main-nav-mobile__catalog-item"
                     key={`main-catalog-item-${item.name}`}
                 >
-                    <Link className="main-nav-mobile__catalog-link" to={item.routerTo}>
+                    <Link className="main-nav-mobile__catalog-link"
+                          to={urlBuilder('products', {type: item.type})}
+                    >
                         {item.name}
                     </Link>
                 </li>
             )
         });
 
-        let pagesData = getPagesData();
+        let pagesData = this.props.stores.pages.items;
         let pages = [];
 
         pagesData.forEach((item) => {
@@ -75,56 +78,4 @@ export default class extends React.Component {
     }
 }
 
-function getCatalogItemsData() {
-    return [
-        {
-            name: 'Телефоны',
-            routerTo: routesMap.products,
-        },
-        {
-            name: 'Планшеты',
-            routerTo: routesMap.products,
-        },
-        {
-            name: 'Часы',
-            routerTo: routesMap.products,
-        },
-        {
-            name: 'Аксессуары',
-            routerTo: routesMap.products,
-        },
-    ];
-}
-
-function getPagesData() {
-    return [
-        {
-            name: 'О компании',
-            routerTo: routesMap.about,
-        },
-        {
-            name: 'Доставка и оплата',
-            routerTo: routesMap.delivery,
-        },
-        {
-            name: 'Акции',
-            routerTo: routesMap.stocks,
-        },
-        {
-            name: 'Поставщикам',
-            routerTo: routesMap.wholesalers,
-        },
-        {
-            name: 'Новости',
-            routerTo: routesMap.news,
-        },
-        {
-            name: 'Гарантии',
-            routerTo: routesMap.warranties,
-        },
-        {
-            name: 'Контакты',
-            routerTo: routesMap.contacts,
-        },
-    ]
-}
+export default headerProductsNavMobile;
