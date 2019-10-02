@@ -16,7 +16,7 @@ import './productCart.scss'
     }
 
     render() {
-        let product = this.props.stores.phones.getById(this.props.productId);
+        let product = this.props.stores.products.getById(this.props.productId);
         let basket = this.props.stores.basket;
 
         let button;

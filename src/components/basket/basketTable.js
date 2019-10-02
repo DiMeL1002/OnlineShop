@@ -23,7 +23,7 @@ import MinusIcon from "~/static/img/minus.svg";
     render() {
         let basket = this.props.stores.basket;
         
-        let products = basket.productsDetailed.map((product) => {
+        let products = basket.products.map((product) => {
             let price = product.price.replace(/[^+\d]/g, '');
             let totalPrice = String(price * product.count);
             totalPrice = totalPrice.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');

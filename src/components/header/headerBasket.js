@@ -16,14 +16,16 @@ import BasketIcon from "~/static/img/basket.svg";
 
     render() {
         let basket = this.props.stores.basket;
-        let totalCountOfProducts = basket.products.length;
 
         return (
             <div className="header-basket" onClick={this.goToBasket}>
                 <div className="header-basket__goods">
                     <span className="header-basket__price">{basket.totalPrice} &#8381;</span>
                     <span className="header-basket__count">
-                        {`${totalCountOfProducts} ${Helpers.bowWord(totalCountOfProducts, ['товар', 'товара', 'товаров'])}`}
+                        {
+                            `${basket.totalCountProducts} 
+                            ${Helpers.bowWord(basket.totalCountProducts, ['товар', 'товара', 'товаров'])}`
+                        }
                     </span>
                 </div>
                 <div className="header-basket__right">

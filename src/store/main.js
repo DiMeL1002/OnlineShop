@@ -1,9 +1,9 @@
-import phonesStore from './phones';
+import ProductsStore from './products';
 import BasketStore from './basket';
 
 class RootStore{
     constructor(){
-        this.phones = new phonesStore(this);
+        this.products = new ProductsStore(this);
         this.basket = new BasketStore(this);
     }
 }

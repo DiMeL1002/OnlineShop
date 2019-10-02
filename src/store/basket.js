@@ -7,16 +7,8 @@ export default class {
         this.rootStore = rootStore;
     }
 
-    @computed get productsDetailed() {
-        return this.products.map((item) => {
-            let product = this.rootStore.phones.getById(item.id);
-
-            return {...product, count: item.count}
-        })
-    }
-
     @computed get totalPrice() {
-        let totalPrice = this.productsDetailed.reduce((total, product) => {
+        let totalPrice = this.products.reduce((total, product) => {
             let price = product.price.replace(/[^+\d]/g, '');
 
             return total + price * product.count;
@@ -27,6 +19,10 @@ export default class {
         return totalPrice;
     }
 
+    @computed get totalCountProducts() {
+        return this.products.length;
+    }
+
     @computed get isProductInBasket() {
         return (id) => this.products.some((product) => product.id === id);
     }
@@ -35,7 +31,9 @@ export default class {
         let index = this.findIndex(id);
 
         if (index === -1) {
-            this.products.push({id, count: 1});
+            let product = this.rootStore.products.getById(id);
+
+            this.products.push({count: 1, ...product});
         }
     }
 

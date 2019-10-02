@@ -51,7 +51,7 @@ let routes = [
     },
     {
         name: 'products',
-        url: '/products',
+        url: '/products/:type',
         component: Products,
         exact: true
     },

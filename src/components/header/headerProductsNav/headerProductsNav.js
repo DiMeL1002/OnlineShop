@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { routesMap } from '~/routes/routes';
+
+import { routesMap, urlBuilder } from '~/routes/routes';
 
 import './headerProductsNav.scss'
 
@@ -31,11 +32,11 @@ function getCatalogItemsData() {
     return [
         {
             name: 'Телефоны',
-            routerTo: routesMap.products,
+            routerTo: urlBuilder('products', {type: 'phones'}),
         },
         {
             name: 'Планшеты',
-            routerTo: routesMap.products,
+            routerTo: urlBuilder('products', {type: 'tablets'}),
         },
         {
             name: 'Часы',
