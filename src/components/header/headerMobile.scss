@@ -34,8 +34,7 @@
     &__main-nav-mobile {
         position: absolute;
         top: 0;
-        right: 0;
-        left: 0;
+        width: 100%;
         z-index: 5;
     }
 
@@ -44,5 +43,21 @@
         top: 0;
         right: 0;
         left: 0;
+    }
+
+    &__main-nav-animate {
+        &-enter { transform: translateX(-1000px); }
+
+        &-enter-active {
+            transform: translateX(0);
+            transition: transform 800ms;
+        }
+
+        &-exit { transform: translateX(0); }
+
+        &-exit-active {
+            transform: translateX(-1000px);
+            transition: transform 800ms;
+        }
     }
 }

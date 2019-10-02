@@ -14,7 +14,7 @@ export default class {
         },
         {
             name: 'Аксессуары',
-            name: 'accessories',
+            type: 'accessories',
         },
     ];
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { CSSTransition } from 'react-transition-group';
 
 import Sandwich from '~c/buttons/sandwich/sandwich'
 import Logo from '~c/header/headerLogo'
@@ -49,13 +50,15 @@ export default class extends React.Component {
                     <UserIcon className="header-mobile__icon" />
                     <BasketIcon className="header-mobile__icon" />
                 </div>
-                {
-                    this.state.showMenu && (
-                        <div className="header-mobile__main-nav-mobile">
-                            <MainNavMobile hideMenu={this.hideMenu}/>
-                        </div>
-                    )
-                }
+                <CSSTransition in={this.state.showMenu}
+                               timeout={800}
+                               unmountOnExit
+                               classNames="header-mobile__main-nav-animate"
+                >
+                    <div className="header-mobile__main-nav-mobile">
+                        <MainNavMobile hideMenu={this.hideMenu}/>
+                    </div>
+                </CSSTransition>
                 {
                     this.state.showSearchModal && (
                         <div className="header-mobile__search">
