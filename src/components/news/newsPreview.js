@@ -1,8 +1,15 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom'
+
+import { routesMap } from '~/routes/routes';
 
 import './newsPreview.scss'
 
-export default function() {
+let NewsPreview = (props) => {
+    let goToNews = () => {
+        props.history.push(routesMap.news);
+    }
+
     return (
         <div className="news-preview">
             <h2 className="news-preview__title">Новости</h2>
@@ -17,8 +24,12 @@ export default function() {
                 </a>
             </div>
             <div className="news-preview__footer">
-                <a className="news-preview__link">Все новости</a>
+                <a className="news-preview__link" onClick={goToNews}>
+                    Все новости
+                </a>
             </div>
         </div>
     )
 }
+
+export default withRouter(NewsPreview);

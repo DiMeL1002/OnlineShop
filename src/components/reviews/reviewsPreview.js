@@ -1,8 +1,15 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom'
+
+import { routesMap } from '~/routes/routes';
 
 import './reviewsPreview.scss'
 
-export default function() {
+let reviewsPreview = (props) => {
+    let goToReviews = () => {
+        props.history.push(routesMap.reviews);
+    }
+
     return (
         <div className="reviews-preview">
             <h2 className="reviews-preview__title">Отзывы</h2>
@@ -15,8 +22,12 @@ export default function() {
                 <span className="reviews-preview__author">Павел</span>
             </div>
             <div className="reviews-preview__footer">
-                <a className="reviews-preview__link">Все отзывы</a>
+                <a className="reviews-preview__link" onClick={goToReviews}>
+                    Все отзывы
+                </a>
             </div>
         </div>
     )
 }
+
+export default withRouter(reviewsPreview);
