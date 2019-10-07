@@ -1,0 +1,22 @@
+@import '~/static/utils/vars.scss';
+@import '~/static/utils/mixins.scss';
+
+.error404 {
+    padding: 40px 0;
+    text-align: center;
+
+    &__code {
+        display: inline-block;
+        margin-bottom: 20px;
+        color: $secondary-text-color;
+        font-size: 5rem;
+        line-height: 1;
+        font-weight: 800;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        
+        @include text-level-1;
+    }
+}
