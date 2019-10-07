@@ -21,13 +21,13 @@ export default class extends React.Component {
         return (
             <div className="phones">
                 <div className="phones__phone">
-                    <span className="phones__number">7 (777) 777-77-77</span>
+                    <a className="phones__number" href="tel:87777777777">8 (777) 777-77-77</a>
                     <a className="phones__text phones__text_is-link" onClick={this.showModal}>
                         Заказать звонок
                     </a>
                 </div>
                 <div className="phones__phone">
-                    <span className="phones__number">7 (777) 777-77-77</span>
+                <a className="phones__number" href="tel:87777777777">8 (777) 777-77-77</a>
                     <span className="phones__text">Звонок бесплатный</span>
                 </div>
                 {

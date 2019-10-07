@@ -24,9 +24,6 @@ export default function() {
             <div className="brands-preview__items">
                 {brands}
             </div>
-            <div className="brands-preview__footer">
-                <a className="brands-preview__link">Все бренды</a>
-            </div>
         </div>
     )
 }
