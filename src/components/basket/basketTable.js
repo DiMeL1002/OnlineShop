@@ -1,5 +1,8 @@
 import React from 'react'
 import {observer, inject} from 'mobx-react';
+import { Link } from 'react-router-dom';
+
+import { urlBuilder } from '~/routes/routes';
 
 import './basketTable.scss'
 
@@ -33,7 +36,11 @@ import MinusIcon from "~/static/img/minus.svg";
                     <div className="basket-table__preview">
                         <img className="basket-table__img" src={product.img} />
                         <div className="basket-table__name">
-                            <a>{product.name}</a>
+                            <Link className="basket-table__link" 
+                                  to={urlBuilder('product', {id: product.id})}
+                            >
+                                {product.name}
+                            </Link>
                             <span className="basket-table__article">
                                 Артикул: {product.article}
                             </span>
