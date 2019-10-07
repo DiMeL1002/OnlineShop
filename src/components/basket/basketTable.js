@@ -25,7 +25,8 @@ import MinusIcon from "~/static/img/minus.svg";
 
     render() {
         let basket = this.props.stores.basket;
-        
+        let title = basket.products.length === 0 ? 'Ваша корзина пуста' : 'Выбранные товары';
+
         let products = basket.products.map((product) => {
             let price = product.price.replace(/[^+\d]/g, '');
             let totalPrice = String(price * product.count);
@@ -75,7 +76,7 @@ import MinusIcon from "~/static/img/minus.svg";
         return (
             <div className="basket-table">
                 <div className="basket-table__header">
-                    <span className="basket-table__title">Выбранные товары</span>
+                    <span className="basket-table__title">{title}</span>
                 </div>
                 <div className="basket-table__body">
                     {products}
