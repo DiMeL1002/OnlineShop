@@ -1,7 +1,9 @@
 import React from 'react'
-import {observer, inject} from 'mobx-react';
 import { withRouter } from 'react-router-dom';
+import { Helmet } from "react-helmet";
+import { observer, inject } from 'mobx-react';
 
+import { urlBuilder } from '~/routes/routes';
 import ProductCart from '~c/product/productCart'
 
 import './products.scss'
@@ -33,6 +35,20 @@ import './products.scss'
 
         return (
             <section className="products">
+                <Helmet>
+                    <title>Купить технику в интернет-магазине - Giant</title>
+                    <meta name="description"
+                        content="Покупайте с выгодой в интернет-магазине Giant. Широкий выбор и доступные цены. Доставка по всей России."
+                    />
+                    <meta property="og:type" content="website" />
+                    <meta property="og:title" content="Купить технику в интернет-магазине - Giant" />
+                    <meta property="og:description"
+                        content="Покупайте с выгодой в интернет-магазине Giant. Широкий выбор и доступные цены. Доставка по всей России."
+                    />
+                    <meta property="og:image" content="https://giant.ru/img/logo.png" />
+                    <meta property="og:url" content={'https://giant.ru' + urlBuilder('products', {type: this.props.match.params.type})} />
+                </Helmet>
+
                 <div className="container">
                     <header className="products__header">
                         <h1 className="products__title">Телефоны</h1>

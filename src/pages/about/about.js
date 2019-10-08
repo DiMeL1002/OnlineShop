@@ -1,4 +1,5 @@
 import React from 'react'
+import {Helmet} from "react-helmet";
 
 import PageContainer from '~p/pageContainer/pageContainer'
 
@@ -8,6 +9,20 @@ export default function() {
     return (
         <PageContainer>
             <section className="about-page">
+                <Helmet>
+                    <title>Giant - о компании</title>
+                    <meta name="description"
+                        content="Giant - Информация для клиентов. Раздел - О компании"
+                    />
+                    <meta property="og:type" content="website" />
+                    <meta property="og:title" content="Giant - о компании" />
+                    <meta property="og:description"
+                        content="Giant - Информация для клиентов. Раздел - О компании"
+                    />
+                    <meta property="og:image" content="https://giant.ru/img/logo.png" />
+                    <meta property="og:url" content="https://giant.ru/about" />
+                </Helmet>
+                
                 <h1 className="about-page__title">О компании</h1>
                 <p>
                     Интернет-магазин Giant занимается продажей различных современных гаджетов. 

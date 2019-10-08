@@ -1,4 +1,5 @@
 import React from 'react'
+import {Helmet} from "react-helmet";
 
 import PageContainer from '~p/pageContainer/pageContainer'
 
@@ -8,6 +9,20 @@ export default function() {
     return (
         <PageContainer>
             <section className="warranties-page">
+                <Helmet>
+                    <title>Giant - гарантии</title>
+                    <meta name="description"
+                        content="Giant - Информация для клиентов. Раздел - Гарантии"
+                    />
+                    <meta property="og:type" content="website" />
+                    <meta property="og:title" content="Giant - гарантии" />
+                    <meta property="og:description"
+                        content="Giant - Информация для клиентов. Раздел - Гарантии"
+                    />
+                    <meta property="og:image" content="https://giant.ru/img/logo.png" />
+                    <meta property="og:url" content="https://giant.ru/warranties" />
+                </Helmet>
+
                 <h1 className="warranties-page__title">Гарантии</h1>
                 <p className="warranties-page__text">
                     Бесплатное сервисное обслуживание в течении 1-го года на любую технику 

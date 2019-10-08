@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import {Helmet} from "react-helmet";
 
 import PageContainer from '~p/pageContainer/pageContainer'
 
@@ -22,6 +23,20 @@ export default function() {
     return (
         <PageContainer>
             <section className="news">
+                <Helmet>
+                    <title>Giant - новости</title>
+                    <meta name="description"
+                        content="Giant - Информация для клиентов. Раздел - Новости"
+                    />
+                    <meta property="og:type" content="website" />
+                    <meta property="og:title" content="Giant - новости" />
+                    <meta property="og:description"
+                        content="Giant - Информация для клиентов. Раздел - Новости"
+                    />
+                    <meta property="og:image" content="https://giant.ru/img/logo.png" />
+                    <meta property="og:url" content="https://giant.ru/news" />
+                </Helmet>
+                
                 <h1 className="news__title">Новости</h1>
                 <div className="news__body">
                     <div className="news__items">

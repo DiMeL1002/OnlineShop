@@ -1,5 +1,6 @@
 import React from 'react'
 import MediaQuery from 'react-responsive'
+import {Helmet} from "react-helmet";
 
 import PageContainer from '~p/pageContainer/pageContainer'
 
@@ -47,6 +48,19 @@ export default function() {
     return (
         <PageContainer>
             <section className="delivery-page">
+                <Helmet>
+                    <title>Giant - доставка</title>
+                    <meta name="description"
+                        content="Giant - Информация для клиентов. Раздел - Доставка"
+                    />
+                    <meta property="og:type" content="website" />
+                    <meta property="og:title" content="Giant - доставка" />
+                    <meta property="og:description"
+                        content="Giant - Информация для клиентов. Раздел - Доставка"
+                    />
+                    <meta property="og:image" content="https://giant.ru/img/logo.png" />
+                    <meta property="og:url" content="https://giant.ru/delivery" />
+                </Helmet>
                 <h1 className="delivery-page__title">Доставка и оплата</h1>
                 <p className="delivery-page__text">
                     Вы можете оформить заказ самостоятельно на сайте либо по телефону.

@@ -1,4 +1,5 @@
 import React from 'react'
+import {Helmet} from "react-helmet";
 
 import PageContainer from '~p/pageContainer/pageContainer'
 
@@ -22,6 +23,20 @@ export default function() {
     return (
         <PageContainer>
             <section className="reviews-page">
+                <Helmet>
+                    <title>Giant - отзывы</title>
+                    <meta name="description"
+                        content="Giant - Информация для клиентов. Раздел - Отзывы"
+                    />
+                    <meta property="og:type" content="website" />
+                    <meta property="og:title" content="Giant - отзывы" />
+                    <meta property="og:description"
+                        content="Giant - Информация для клиентов. Раздел - Отзывы"
+                    />
+                    <meta property="og:image" content="https://giant.ru/img/logo.png" />
+                    <meta property="og:url" content="https://giant.ru/reviews" />
+                </Helmet>
+                
                 <h1 className="reviews-page__title">Отзывы</h1>
                 {reviews}
             </section>
