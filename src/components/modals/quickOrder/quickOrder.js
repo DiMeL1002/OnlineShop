@@ -65,7 +65,7 @@ function QuickOrder(props) {
                                 placeholder="Номер телефона*"
                             />
                             <ErrorMessage name="phone">
-                                {msg => <div className="quick-order__error">{msg}</div>}
+                                {msg => <div className="quick-order-form__error">{msg}</div>}
                             </ErrorMessage>
                         </div>
                         <Button type="submit" text="Оформить заказ" />
