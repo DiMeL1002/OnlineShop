@@ -43,7 +43,7 @@ export default class extends React.Component {
                     }}
                 >
                     {() => (
-                        <Form>
+                        <Form className="signIn-form">
                             <div className="signIn-form__input">
                                 <Field
                                     className="input"

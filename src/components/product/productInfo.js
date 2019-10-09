@@ -8,14 +8,27 @@ import Button from '~c/buttons/button/button'
 import ProductRating from '~c/product/productRating'
 import ProductPay from '~c/product/productPay'
 import ProductDelivery from '~c/product/productDelivery'
+import Overlay from '~c/overlay/overlay'
+import PortalModal from '~c/modals/portalModal/portalModal'
+import QuickOrder from '~c/modals/quickOrder/quickOrder'
 
 import './productInfo.scss'
 
 @inject('stores') @observer class ProductInfo extends React.Component {
     static propTypes = { productId: PropTypes.number.isRequired }
 
+    state = { showModal: false }
+
     goToBasket = () => {
         this.props.history.push(routesMap.basket);
+    }
+
+    showQuickOrderModal = () => {
+        this.setState({ showModal: true });
+    }
+
+    hideModal = () => {
+        this.setState({showModal: false});
     }
 
     render() {
@@ -75,7 +88,11 @@ import './productInfo.scss'
                                 {button}
                             </div>
                             <div className="product-info__button-buy-click">
-                                <Button type="button" text="Купить в 1 клик" theme="gray" />
+                                <Button type="button"
+                                        text="Купить в 1 клик"
+                                        theme="gray"
+                                        onClick={this.showQuickOrderModal}
+                                />
                             </div>
                         </div>
                     </div>
@@ -84,6 +101,15 @@ import './productInfo.scss'
                         <ProductDelivery />
                     </div>
                 </div>
+
+                {
+                    this.state.showModal && (
+                        <PortalModal>
+                            <Overlay />
+                            <QuickOrder productName={product.name} hideModal={this.hideModal} />
+                        </PortalModal>
+                    )
+                }
             </section>
         )
     }

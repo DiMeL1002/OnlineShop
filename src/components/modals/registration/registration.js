@@ -69,8 +69,8 @@ export default class extends React.Component {
                     }}
                 >
                     {() => (
-                        <Form>
-                            <div className="signIn-form__input">
+                        <Form className="registration-form">
+                            <div className="registration-form__input">
                                 <Field
                                     className="input"
                                     type="text"
@@ -78,10 +78,10 @@ export default class extends React.Component {
                                     placeholder="Логин*"
                                 />
                                 <ErrorMessage name="login">
-                                    {msg => <div className="signIn-form__error">{msg}</div>}
+                                    {msg => <div className="registration-form__error">{msg}</div>}
                                 </ErrorMessage>
                             </div>
-                            <div className="signIn-form__input">
+                            <div className="registration-form__input">
                                 <Field
                                     className="input"
                                     type="password"
@@ -89,10 +89,10 @@ export default class extends React.Component {
                                     placeholder="Введите пароль*"
                                 />
                                 <ErrorMessage name="password">
-                                    {msg => <div className="signIn-form__error">{msg}</div>}
+                                    {msg => <div className="registration-form__error">{msg}</div>}
                                 </ErrorMessage>
                             </div>
-                            <div className="signIn-form__input">
+                            <div className="registration-form__input">
                                 <Field
                                     className="input"
                                     type="password"
@@ -100,10 +100,10 @@ export default class extends React.Component {
                                     placeholder="Подтверждение пароля*"
                                 />
                                 <ErrorMessage name="confirmPassword">
-                                    {msg => <div className="signIn-form__error">{msg}</div>}
+                                    {msg => <div className="registration-form__error">{msg}</div>}
                                 </ErrorMessage>
                             </div>
-                            <div className="signIn-form__input">
+                            <div className="registration-form__input">
                                 <Field
                                     className="input"
                                     type="email"
@@ -111,7 +111,7 @@ export default class extends React.Component {
                                     placeholder="Электронная почта*"
                                 />
                                 <ErrorMessage name="email">
-                                    {msg => <div className="signIn-form__error">{msg}</div>}
+                                    {msg => <div className="registration-form__error">{msg}</div>}
                                 </ErrorMessage>
                             </div>
                             <Button type="submit" text="Регистрация" />

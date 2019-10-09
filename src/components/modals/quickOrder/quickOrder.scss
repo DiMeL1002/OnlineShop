@@ -1,9 +1,17 @@
 @import '~/static/utils/vars.scss';
+@import '~/static/utils/mixins.scss';
 
-.registration-form {
+.quickOrder-form {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    &__product-name {
+        display: inline-block;
+        margin-bottom: 30px;
+
+        @include text-level-2;
+    }
 
     &__input {
         width: 100%;
