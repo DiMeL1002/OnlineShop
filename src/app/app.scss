@@ -1,6 +1,8 @@
 @import '../static/utils/vars.scss';
 @import '../static/utils/fonts.scss';
 
+@import '~c/inputs/input/input.scss';
+
 // * { // Фикс бага с шириной слайдеров
 //     min-height: 0;
 //     min-width: 0;

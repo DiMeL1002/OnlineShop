@@ -7,6 +7,7 @@ export default class extends React.Component {
     static defaultProps = {
         value: '',
         placeholder: '',
+        onChange: function() {},
     }
 
     static propTypes = {
@@ -14,6 +15,7 @@ export default class extends React.Component {
         name: PropTypes.string.isRequired,
         value: PropTypes.string,
         placeholder: PropTypes.string,
+        onChange: PropTypes.func,
     }
 
     render() {
@@ -24,6 +26,7 @@ export default class extends React.Component {
                        name={this.props.name}
                        defaultValue={this.props.value}
                        placeholder={this.props.placeholder}
+                       onChange={this.props.onChange}
                 >
                 </input>
             </React.Fragment>

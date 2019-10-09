@@ -15,11 +15,11 @@ export default class extends React.Component {
     }
 
     componentDidMount() {
-        document.addEventListener('click', this.hadleClickOutside);
+        document.addEventListener('mousedown', this.hadleClickOutside);
     }
 
     componentWillUnmount() {
-        document.removeEventListener('click', this.hadleClickOutside);
+        document.removeEventListener('mousedown', this.hadleClickOutside);
     }
 
     hadleClickOutside = () => {
