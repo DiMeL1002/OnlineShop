@@ -44,9 +44,9 @@ function QuickOrder(props) {
                 }}
             >
                 {() => (
-                    <Form className="quickOrder-form">
-                        <span className="quickOrder-form__product-name">{props.productName}</span>
-                        <div className="quickOrder-form__input">
+                    <Form className="quick-order-form">
+                        <span className="quick-order-form__product-name">{props.productName}</span>
+                        <div className="quick-order-form__input">
                             <Field
                                 className="input"
                                 type="text"
@@ -54,10 +54,10 @@ function QuickOrder(props) {
                                 placeholder="Ваше имя*"
                             />
                             <ErrorMessage name="name">
-                                {msg => <div className="quickOrder-form__error">{msg}</div>}
+                                {msg => <div className="quick-order-form__error">{msg}</div>}
                             </ErrorMessage>
                         </div>
-                        <div className="quickOrder-form__input">
+                        <div className="quick-order-form__input">
                             <Field
                                 className="input"
                                 type="text"
@@ -65,7 +65,7 @@ function QuickOrder(props) {
                                 placeholder="Номер телефона*"
                             />
                             <ErrorMessage name="phone">
-                                {msg => <div className="quickOrder-form__error">{msg}</div>}
+                                {msg => <div className="quick-order__error">{msg}</div>}
                             </ErrorMessage>
                         </div>
                         <Button type="submit" text="Оформить заказ" />
