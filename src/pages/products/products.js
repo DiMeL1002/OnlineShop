@@ -28,6 +28,8 @@ import './products.scss'
 
     render() {
         let productsStore = this.props.stores.products;
+        let productsType = this.props.match.params.type;
+        let catalogItemsStore = this.props.stores.catalogItems.itemsMap;
 
         let products = productsStore.items.map((product) => {
             return <ProductCart productId={product.id} key={`phone-${product.id}`} />
@@ -46,12 +48,12 @@ import './products.scss'
                         content="Покупайте с выгодой в интернет-магазине Giant. Широкий выбор и доступные цены. Доставка по всей России."
                     />
                     <meta property="og:image" content="https://giant.ru/img/logo.png" />
-                    <meta property="og:url" content={'https://giant.ru' + urlBuilder('products', {type: this.props.match.params.type})} />
+                    <meta property="og:url" content={'https://giant.ru' + urlBuilder('products', {type: productsType})} />
                 </Helmet>
 
                 <div className="container">
                     <header className="products__header">
-                        <h1 className="products__title">Телефоны</h1>
+                        <h1 className="products__title">{catalogItemsStore[productsType]}</h1>
                     </header>
                     <div className="products__body">
                         <aside className="products__filter"></aside>

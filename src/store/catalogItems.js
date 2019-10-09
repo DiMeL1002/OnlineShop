@@ -1,5 +1,7 @@
+import {observable, computed, } from 'mobx';
+
 export default class {
-    items = [
+    @observable items = [
         {
             name: 'Телефоны',
             type: 'phones',
@@ -20,5 +22,15 @@ export default class {
 
     constructor(rootStore) {
         this.rootStore = rootStore;
+    }
+
+    @computed get itemsMap() {
+        let map = {};
+
+        this.items.forEach((item) => {
+            map[item.type] = item.name;
+        });
+        
+        return map;
     }
 }
