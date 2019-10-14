@@ -4,11 +4,11 @@ import { Helmet } from "react-helmet";
 import { observer, inject } from 'mobx-react';
 
 import { urlBuilder } from '~/routes/routes';
-import ProductCart from '~c/product/productCart'
+import Products from '~c/products/products'
 
 import './products.scss'
 
-@inject('stores') @observer class Products extends React.Component {
+@inject('stores') @observer class ProductsPage extends React.Component {
     componentDidMount() {
         this.loadingProducts();
     }
@@ -27,16 +27,11 @@ import './products.scss'
     }
 
     render() {
-        let productsStore = this.props.stores.products;
         let productsType = this.props.match.params.type;
         let catalogItemsStore = this.props.stores.catalogItems.itemsMap;
 
-        let products = productsStore.items.map((product) => {
-            return <ProductCart productId={product.id} key={`phone-${product.id}`} />
-        })
-
         return (
-            <section className="products">
+            <section className="products-page">
                 <Helmet>
                     <title>Купить технику в интернет-магазине - Giant</title>
                     <meta name="description"
@@ -52,16 +47,11 @@ import './products.scss'
                 </Helmet>
 
                 <div className="container">
-                    <header className="products__header">
-                        <h1 className="products__title">{catalogItemsStore[productsType]}</h1>
+                    <header className="products-page__header">
+                        <h1 className="products-page__title">{catalogItemsStore[productsType]}</h1>
                     </header>
-                    <div className="products__body">
-                        <aside className="products__filter"></aside>
-                        <div className="products__main">
-                            <div className="products__catalog">
-                                {products}
-                            </div>
-                        </div>
+                    <div className="products-page__body">
+                        <Products />
                     </div>
                 </div>
             </section>
@@ -69,4 +59,4 @@ import './products.scss'
     }
 }
 
-export default withRouter(Products);
+export default withRouter(ProductsPage);

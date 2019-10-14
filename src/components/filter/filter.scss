@@ -1,0 +1,13 @@
+.filter {
+    max-width: 270px;
+    padding:  10px;
+    background-color: #edf6fc;
+
+    &__range { margin-bottom: 50px; }
+
+   &__item {
+        margin-bottom: 10px;
+
+        &:last-of-type { margin-bottom: 30px; }
+    }
+}
