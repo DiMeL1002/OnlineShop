@@ -28,7 +28,7 @@ import './products.scss'
 
     render() {
         let productsType = this.props.match.params.type;
-        let catalogItemsStore = this.props.stores.catalogItems.itemsMap;
+        let catalogItemsStore = this.props.stores.categories.itemsMap;
 
         return (
             <section className="products-page">

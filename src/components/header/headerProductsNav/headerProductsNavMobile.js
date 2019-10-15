@@ -23,7 +23,7 @@ import './headerProductsNavMobile.scss'
     }
 
     render() {
-        let catalogItemsData = this.props.stores.catalogItems.items;
+        let catalogItemsData = this.props.stores.categories.items;
         let catalogItems = [];
 
         catalogItemsData.forEach((item) => {

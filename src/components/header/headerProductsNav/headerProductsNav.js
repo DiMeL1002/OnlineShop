@@ -8,7 +8,7 @@ import './headerProductsNav.scss'
 
 @inject('stores') @observer class headerProductsNav extends React.Component {
     render() {
-        let catalogItemsData = this.props.stores.catalogItems.items;
+        let catalogItemsData = this.props.stores.categories.items;
         let catalogItems = [];
 
         catalogItemsData.forEach((item) => {

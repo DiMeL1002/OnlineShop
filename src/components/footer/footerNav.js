@@ -9,7 +9,7 @@ import './footerNav.scss'
 @inject('stores') @observer class footerNav extends React.Component {
 
     render() {
-        let catalogItemsData = this.props.stores.catalogItems.items;
+        let catalogItemsData = this.props.stores.categories.items;
         let catalogItems = [];
 
         catalogItemsData.forEach((item) => {
