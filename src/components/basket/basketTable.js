@@ -28,14 +28,15 @@ import MinusIcon from "~/static/img/minus.svg";
         let title = basket.products.length === 0 ? 'Ваша корзина пуста' : 'Выбранные товары';
 
         let products = basket.products.map((product) => {
-            let price = product.price.replace(/[^+\d]/g, '');
-            let totalPrice = String(price * product.count);
+            let price = String(product.price).replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');
+            
+            let totalPrice = String(product.price * product.count);
             totalPrice = totalPrice.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');
 
             return (
                 <div className="basket-table__item" key={`product-${product.id}`}>
                     <div className="basket-table__preview">
-                        <img className="basket-table__img" src={product.img} />
+                        <img className="basket-table__img" src={`/img/products/${product.img}`} />
                         <div className="basket-table__name">
                             <Link className="basket-table__link" 
                                   to={urlBuilder('product', {id: product.id})}
@@ -47,7 +48,7 @@ import MinusIcon from "~/static/img/minus.svg";
                             </span>
                         </div>
                     </div>
-                    <div className="basket-table__price">{product.price}</div>
+                    <div className="basket-table__price">{price} руб</div>
                     <div className="basket-table__counter">
                         <div className="basket-table__minus"
                              onClick={() => this.reduceProductCount(product.id, product.count)}

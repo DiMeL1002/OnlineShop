@@ -9,9 +9,7 @@ export default class {
 
     @computed get totalPrice() {
         let totalPrice = this.products.reduce((total, product) => {
-            let price = product.price.replace(/[^+\d]/g, '');
-
-            return total + price * product.count;
+            return total + product.price * product.count;
         }, 0)
 
         totalPrice = String(totalPrice).replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');

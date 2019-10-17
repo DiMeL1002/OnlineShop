@@ -23,7 +23,7 @@ import './products.scss'
         let productsStore = this.props.stores.products;
         let productsType = this.props.match.params.type;
 
-        productsStore.getProductsFromAPI(productsType);
+        productsStore.load(productsType);
     }
 
     render() {

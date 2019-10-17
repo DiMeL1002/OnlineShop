@@ -8,12 +8,22 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     devtool: 'cheap-module-eval-source-map',
     devServer: {
         contentBase: baseWebpackConfig.externals.path.src,
-        index: 'index.html',
-        port: 8081,
+        // index: 'index.html',
+        // port: 8081,
         historyApiFallback: true,
         overlay: {
             warnings: true,
             errors: true
+        },
+        proxy: {
+            '/api/**': {
+                target: 'http://95.181.200.182:8080',
+                pathRewrite: {
+                    "^/api": ""
+                },
+                secure: false,
+                changeOrigin: true
+            }
         }
     },
     plugins: [

@@ -32,9 +32,9 @@ import './productInfo.scss'
     }
 
     render() {
-        let product = this.props.stores.products.getById(this.props.productId);
+        let product = this.props.stores.products.item;
         let basket = this.props.stores.basket;
-
+        let price = String(product.price).replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');
         let button;
 
         if (basket.isProductInBasket(product.id)) {
@@ -58,7 +58,7 @@ import './productInfo.scss'
             <section className="product-info">
                 <div className="product-info__img-wrapper">
                     <img className="product-info__img"
-                         src={product.img}
+                         src={`/img/products/${product.img}`}
                          alt={product.name}
                     />
                 </div>
@@ -66,7 +66,7 @@ import './productInfo.scss'
                     <div className="product-info__row">
                         <h1 className="product-info__name">{product.name}</h1>
                         <img className="product-info__logo"
-                             src={product.brand}
+                             src={`/img/brands/${product.brand}`}
                              alt="Логотип производителя"
                         />
                     </div>
@@ -82,7 +82,7 @@ import './productInfo.scss'
                         </span>
                     </div>
                     <div className="product-info__row product-info__row_buttons">
-                        <span className="product-info__price">{product.price}</span>
+                        <span className="product-info__price">{price} руб</span>
                         <div className="product-info__buttons">
                             <div className="product-info__button-buy">
                                 {button}

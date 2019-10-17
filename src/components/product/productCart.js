@@ -18,7 +18,7 @@ import './productCart.scss'
     render() {
         let product = this.props.stores.products.getById(this.props.productId);
         let basket = this.props.stores.basket;
-
+        let price = String(product.price).replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ');
         let button;
 
         if (basket.isProductInBasket(product.id)) {
@@ -42,12 +42,12 @@ import './productCart.scss'
         return (
             <div className="product-cart">
                 <Link className="product-cart__link" to={urlBuilder('product', {id: product.id})}>
-                    <img className="product-cart__img" src={product.img} />
+                    <img className="product-cart__img" src={`/img/products/${product.img}`} />
                     <span className="product-cart__text">
                         {product.name}
                     </span>
                 </Link>
-                <span className="product-cart__price">{product.price}</span>
+                <span className="product-cart__price">{price} руб</span>
                 {button}
             </div>
         )

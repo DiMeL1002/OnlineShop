@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from "react-helmet";
 import { inject } from 'mobx-react'
+import { withRouter } from 'react-router-dom';
 
 import { urlBuilder } from '~/routes/routes';
 import Product from '~c/product/product'
@@ -8,12 +9,19 @@ import Product from '~c/product/product'
 import './product.scss'
 
 @inject('stores') class ProductPage extends React.Component {
+    componentDidMount() {
+        let id = this.props.match.params.id;
+        let productsStore = this.props.stores.products;
+
+        productsStore.loadProduct(id);
+    }
+
     render() {    
         let id = parseInt(this.props.match.params.id);
         
         if (id === null) return <div>Ошибка 404</div>;
 
-        let product = this.props.stores.products.getById(id);
+        let product = this.props.stores.products.item;
 
         return (
             <main className="product">
@@ -39,4 +47,4 @@ import './product.scss'
     }
 }
 
-export default ProductPage;
+export default withRouter(ProductPage);
