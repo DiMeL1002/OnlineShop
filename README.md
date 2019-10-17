@@ -4,4 +4,4 @@
 
 Используемые технологии scss, webpack, БЭМ, React, Mobx.
 
-GitHub Pages https://dimel10.github.io/
+http://dimel.giant1990.ru/
