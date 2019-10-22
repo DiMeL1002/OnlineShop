@@ -1,13 +1,7 @@
-function all() {
-    return fetch('http://95.181.200.182:8080/categories').then((response) => {
-        if (response.status !== 200) {
-            return response.text().then(function(text) {
-                throw new Error(text);
-            });
-        }
+import makeRequest from './helpers/makeRequest'
 
-        return response.json();
-    })
+function all() {
+    return makeRequest('categories');
 }
 
 export { all };

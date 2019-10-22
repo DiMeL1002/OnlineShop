@@ -1,25 +1,11 @@
-function type(type) {
-    return fetch(`http://95.181.200.182:8080/products/${type}`).then((response) => {
-        if (response.status !== 200) {
-            return response.text().then(function(text) {
-                throw new Error(text);
-            })
-        }
+import makeRequest from './helpers/makeRequest'
 
-        return response.json();
-    })
+function type(type) {
+    return makeRequest(`products/${type}`);
 }
 
 function product(id) {
-    return fetch(`http://95.181.200.182:8080/product/${id}`).then((response) => {
-        if (response.status !== 200) {
-            return response.text().then((text) => {
-                throw new Error(text);
-            })
-        }
-
-        return response.json();
-    })
+    return makeRequest(`product/${id}`);
 }
 
 export { type, product };
