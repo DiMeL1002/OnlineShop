@@ -28,6 +28,9 @@ export default class extends React.Component {
             case 'gray':
                 className += ` button_theme_gray`;
                 break;
+            case 'white':
+                className += ` button_theme_white`;
+                break;
         }
 
         switch (this.props.size) {

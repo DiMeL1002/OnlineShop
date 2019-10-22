@@ -1,12 +1,17 @@
-import React from 'react';
-import Slider from "react-slick";
+import React from 'react'
+import Slider from "react-slick"
+import { withRouter } from 'react-router-dom'
+import { inject} from 'mobx-react';
+
+import { urlBuilder } from '~/routes/routes'
+import Button from '~c/buttons/button/button'
 
 import './banner.scss'
 
 import PrevIcon from '~/static/img/banner-prev.svg';
 import NextIcon from '~/static/img/banner-next.svg';
 
-export default class extends React.Component {
+@inject('stores') class Banner extends React.Component {
 
     setSliderRef = (element) => {
         this.slider = element;
@@ -18,6 +23,10 @@ export default class extends React.Component {
 
     prevSlide = () => {
         this.slider.slickPrev();
+    }
+
+    goToProduct = (id) => {
+        this.props.history.push(urlBuilder('product', {id}))
     }
 
     render() {
@@ -33,7 +42,7 @@ export default class extends React.Component {
             ),
         };
 
-        let slidesData = getSlidesData();
+        let slidesData = this.props.stores.banner.items;
         let slides = [];
 
         slidesData.forEach((banner) => {
@@ -43,6 +52,13 @@ export default class extends React.Component {
                         <div className="banner__col">
                             <div className="banner__title">{banner.title}</div>
                             <div className="banner__description">{banner.description}</div>
+                            <Button
+                                type="button"
+                                theme="white"
+                                size="s"
+                                text="Выбрать"
+                                onClick={() => this.goToProduct(banner.id)}
+                            />
                         </div>
                         <div className="banner__col_img">
                             <img className="banner__img" src={banner.img} />
@@ -68,22 +84,4 @@ export default class extends React.Component {
     }
 }
 
-function getSlidesData() {
-    return [
-        {
-            title: "Xiaomi Mi Band 3",
-            description: "Лучший фитнес браслет 2019 года",
-            img: "/img/banner/banner1.png",
-        },
-        {
-            title: "Samsung Galaxy Tab A 10.1 SM-T515",
-            description: "Доступный и стильный",
-            img: "/img/banner/banner2.png",
-        },
-        {
-            title: "Xiaomi Redmi Note 7",
-            description: "Лучший бюджетный телефон",
-            img: "/img/banner/banner3.png",
-        },
-    ]
-}
+export default withRouter(Banner);
