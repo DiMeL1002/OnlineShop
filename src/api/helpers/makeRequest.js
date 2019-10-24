@@ -1,5 +1,5 @@
-// let mainServerUrl = '/api/';
-let mainServerUrl = 'http://localhost:8080/';
+let mainServerUrl = '/api/';
+// let mainServerUrl = 'http://localhost:8080/';
 
 function makeRequest(url, options = {}, baseUrl = mainServerUrl) {
     return fetch(baseUrl + url, options).then((response) => {
