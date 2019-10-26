@@ -1,10 +1,11 @@
 import {observable, computed, action} from 'mobx';
 
-export default class {
+class Basket {
     @observable products = []
 
     constructor(rootStore) {
         this.rootStore = rootStore;
+        this.api = this.rootStore.api.basket;
     }
 
     @computed get totalPrice() {
@@ -25,6 +26,15 @@ export default class {
         return (id) => this.products.some((product) => product.id === id);
     }
 
+    @action load() {
+        return new Promise((resolve, reject) => {
+            this.api.load().then((data) => {
+                this.products = data;
+                resolve(true);
+            })
+        })
+    }
+
     @action addProduct(id) {
         let index = this.findIndex(id);
 
@@ -33,6 +43,8 @@ export default class {
 
             this.products.push({count: 1, ...product});
         }
+
+        this.refreshBasketOnApi();
     }
 
     @action changeProductCount(id, count) {
@@ -41,6 +53,8 @@ export default class {
         if (index !== -1) {
             this.products[index].count = count;
         }
+
+        this.refreshBasketOnApi();
     }
 
     @action removeProduct(id) {
@@ -49,9 +63,21 @@ export default class {
         if (index !== -1) {
             this.products.splice(index, 1);
         }
+
+       this.refreshBasketOnApi();
     }
 
     findIndex(id) {
         return this.products.findIndex((product) => product.id === id);
     }
+
+    refreshBasketOnApi() {
+        return new Promise((resolve, reject) => {
+            this.api.refresh(this.products).then(() => {
+                resolve(true);
+            })
+        })
+    }
 }
+
+export default Basket;

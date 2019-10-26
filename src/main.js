@@ -12,6 +12,9 @@ import "slick-carousel/slick/slick.scss";
 
 import stores from './store/main';
 
-stores.categories.load()
+stores.user.load().then(() => {
+    stores.basket.load();
+});
+stores.categories.load();
 
 ReactDom.render(<App/>, document.querySelector('#app'));
