@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import ProductInfo from '~c/product/productInfo'
-import ProductBody from '~c/product/productBody'
+import ProductInfo from './components/ProductInfo/ProductInfo'
+import ProductBody from './components/ProductBody/ProductBody'
 
-import './product.scss'
+import './Product.scss'
 
 function Product(props) {
     return (

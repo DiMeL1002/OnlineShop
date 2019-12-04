@@ -4,9 +4,9 @@ import { inject } from 'mobx-react'
 import { withRouter } from 'react-router-dom';
 
 import { urlBuilder } from '~/routes/routes';
-import Product from '~c/product/product'
+import Product from '~c/Product/Product'
 
-import './product.scss'
+import './Product.scss'
 
 @inject('stores') class ProductPage extends React.Component {
     componentDidMount() {

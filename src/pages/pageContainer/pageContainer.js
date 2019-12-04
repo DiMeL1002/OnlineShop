@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Advantages from '~c/advantages/advantages'
+import Advantages from '~c/Advantages/Advantages'
 
 import './pageContainer.scss'
 

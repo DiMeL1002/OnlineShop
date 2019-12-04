@@ -1,11 +1,11 @@
 import React from 'react'
 
-import Overlay from '~c/overlay/overlay'
-import PortalModal from '~c/modals/portalModal/portalModal'
-import Registration from '~c/modals/registration/registration'
-import SignIn from '~c/modals/signIn/signIn'
+import Overlay from '~c/Overlay/Overlay'
+import PortalModal from '~c/modals/PortalModal/PortalModal'
+import Registration from '~c/modals/Registration/Registration'
+import SignIn from '~c/modals/SignIn/SignIn'
 
-import './signedOutLinks.scss'
+import './SignedOutLinks.scss'
 
 export default class extends React.Component {
     state = {

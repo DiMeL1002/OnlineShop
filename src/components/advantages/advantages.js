@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Advantage from '~c/advantages/advantage'
+import Advantage from './components/Advantage/Advantage'
 
-import './advantages.scss'
+import './Advantages.scss'
 
 export default function Advantages() {
     return (

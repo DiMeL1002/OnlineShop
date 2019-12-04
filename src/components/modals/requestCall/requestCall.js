@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Button from '~c/buttons/button/button'
-import Input from '~c/inputs/input/input'
-import ModalContainer from '~c/modals/modalContainer/modalContainer'
+import Button from '~c/buttons/Button/Button'
+import Input from '~c/Input/Input'
+import ModalContainer from '~c/modals/ModalContainer/ModalContainer'
 
-import './requestCall.scss'
+import './RequestCall.scss'
 
 export default class extends React.Component {
     static defaultProps = { hideModal: function() {} }

@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import {Helmet} from "react-helmet";
 
-import PageContainer from '~p/pageContainer/pageContainer'
+import PageContainer from '~p/PageContainer/PageContainer'
 
-import './news.scss'
+import './News.scss'
 
 export default function() {
     let newsData = getNews();

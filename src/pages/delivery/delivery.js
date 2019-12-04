@@ -2,9 +2,9 @@ import React from 'react'
 import MediaQuery from 'react-responsive'
 import {Helmet} from "react-helmet";
 
-import PageContainer from '~p/pageContainer/pageContainer'
+import PageContainer from '~p/PageContainer/PageContainer'
 
-import './delivery.scss'
+import './Delivery.scss'
 
 export default function() {
     let table = (

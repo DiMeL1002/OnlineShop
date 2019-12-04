@@ -1,17 +1,17 @@
 import React from 'react';
 import MediaQuery from 'react-responsive'
 
-import ProductsNavButton from '~c/buttons/productsNavButton/productsNavButton'
-import HeaderBasket from '~c/header/headerBasket'
-import Logo from '~c/header/headerLogo'
-import HeaderNav from '~c/header/headerNav'
-import Phones from '~c/header/headerPhones'
-import MainNav from '~c/header/headerProductsNav/headerProductsNav'
-import MainNavMobile from '~c/header/headerProductsNav/headerProductsNavMobile'
-import Search from '~c/header/headerSearch'
-import SignedOutLinks from '~c/signedOutLinks/signedOutLinks'
+import ProductsNavButton from '~c/buttons/ProductsNavButton/ProductsNavButton'
+import HeaderBasket from './components/HeaderBasket/HeaderBasket'
+import Logo from './components/HeaderLogo/HeaderLogo'
+import HeaderNav from './components/HeaderNav/HeaderNav'
+import Phones from './components/HeaderPhones/HeaderPhones'
+import MainNav from './components/HeaderProductsNav/HeaderProductsNav'
+import MainNavMobile from './components/HeaderProductsNav/HeaderProductsNavMobile'
+import Search from './components/HeaderSearch/HeaderSearch'
+import SignedOutLinks from '~c/SignedOutLinks/SignedOutLinks'
 
-import './header.scss'
+import './Header.scss'
 
 import SearchIcon from "~/static/img/search.svg";
 

@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Button from '~c/buttons/button/button'
-import FilterItem from '~c/filter/filterItem'
-import FilterRange from '~c/filter/filterRange'
+import Button from '~c/buttons/Button/Button'
+import FilterItem from './components/FilterItem/FilterItem'
+import FilterRange from './components/FilterRange/FilterRange'
 
-import './filter.scss'
+import './Filter.scss'
 
 function Filter() {
     return (

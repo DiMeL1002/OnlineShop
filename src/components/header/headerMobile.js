@@ -3,12 +3,12 @@ import { CSSTransition } from 'react-transition-group';
 import { withRouter } from 'react-router-dom'
 
 import { routesMap } from '~/routes/routes';
-import Sandwich from '~c/buttons/sandwich/sandwich'
-import Logo from '~c/header/headerLogo'
-import MainNavMobile from '~c/header/headerProductsNav/headerProductsNavMobile'
-import Search from '~c/header/headerSearch'
+import Sandwich from '~c/buttons/Sandwich/Sandwich'
+import Logo from './components/HeaderLogo/HeaderLogo'
+import MainNavMobile from './components/HeaderProductsNav/HeaderProductsNavMobile'
+import Search from './components/HeaderSearch/HeaderSearch'
 
-import './headerMobile.scss'
+import './HeaderMobile.scss'
 
 import SearchIcon from "~/static/img/search.svg";
 import UserIcon from "~/static/img/user.svg";

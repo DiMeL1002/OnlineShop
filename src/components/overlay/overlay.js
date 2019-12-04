@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './overlay.scss'
+import './Overlay.scss'
 
 export default function() {
     return (

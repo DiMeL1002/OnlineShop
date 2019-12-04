@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Filter from '~c/filter/filter'
+import Filter from '~c/Filter/Filter'
 
-import './filterMobile.scss'
+import './FilterMobile.scss'
 
 import CloseIcon from "~/static/img/close.svg";
 

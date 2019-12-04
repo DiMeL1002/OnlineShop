@@ -5,7 +5,7 @@ import "core-js/es/symbol";
 import React from 'react';
 import ReactDom from 'react-dom';
 
-import App from './app/app.js';
+import App from './App/App.js';
 import './static/img/favicons/favicons';
 
 import "slick-carousel/slick/slick.scss";

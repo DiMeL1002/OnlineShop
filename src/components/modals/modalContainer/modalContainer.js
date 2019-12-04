@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 
-import './modalContainer.scss'
+import './ModalContainer.scss'
 
 import ModalCloseIcon from "~/static/img/close.svg";
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './sandwich.scss' 
+import './Sandwich.scss' 
 
 export default class extends React.Component {
     static defaultProps = {

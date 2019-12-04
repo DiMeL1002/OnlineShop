@@ -4,12 +4,12 @@ import { observer, inject } from 'mobx-react'
 import MediaQuery from 'react-responsive'
 import { CSSTransition } from 'react-transition-group';
 
-import Button from '~c/buttons/button/button'
-import ProductCart from '~c/product/productCart'
-import Filter from '~c/filter/filter'
-import FilterMobile from '~c/filter/filterMobile'
+import Button from '~c/buttons/Button/Button'
+import ProductCart from '~c/ProductCart/ProductCart'
+import Filter from '~c/Filter/Filter'
+import FilterMobile from '~c/Filter/FilterMobile'
 
-import './products.scss'
+import './Products.scss'
 
 @inject('stores') @observer class Products extends React.Component {
     state = { showFilters: false }

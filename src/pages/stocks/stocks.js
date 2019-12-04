@@ -1,9 +1,9 @@
 import React from 'react'
 import {Helmet} from "react-helmet";
 
-import PageContainer from '~p/pageContainer/pageContainer'
+import PageContainer from '~p/PageContainer/PageContainer'
 
-import './stocks.scss'
+import './Stocks.scss'
 
 export default function() {
     return (

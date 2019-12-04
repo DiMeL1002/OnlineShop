@@ -1,12 +1,12 @@
 import React from 'react';
 import MediaQuery from 'react-responsive'
 
-import FooterNav from '~c/footer/footerNav'
-import FooterContacts from '~c/footer/footerContacts/footerContacts'
-import FooterContactsMobile from '~c/footer/footerContacts/footerContactsMobile'
-import FooterSocials from '~c/footer/footerSocials'
+import FooterNav from './components/FooterNav/FooterNav'
+import FooterContacts from './components/FooterContacts/FooterContacts'
+import FooterContactsMobile from './components/FooterContacts/FooterContactsMobile'
+import FooterSocials from './components/FooterSocials/FooterSocials'
 
-import './footer.scss'
+import './Footer.scss'
 
 export default function() {
     return (

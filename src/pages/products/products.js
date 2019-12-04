@@ -4,9 +4,9 @@ import { Helmet } from "react-helmet";
 import { observer, inject } from 'mobx-react';
 
 import { urlBuilder } from '~/routes/routes';
-import Products from '~c/products/products'
+import Products from '~c/Products/Products'
 
-import './products.scss'
+import './Products.scss'
 
 @inject('stores') @observer class ProductsPage extends React.Component {
     componentDidMount() {

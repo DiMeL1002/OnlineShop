@@ -1,9 +1,9 @@
 import React from 'react'
 
-import BasketTable from '~c/basket/basketTable'
-import BasketTotal from '~c/basket/basketTotal'
+import BasketTable from './components/BasketTable/BasketTable'
+import BasketTotal from './components/BasketTotal/BasketTotal'
 
-import './basket.scss'
+import './Basket.scss'
 
 export default function() {
     return (

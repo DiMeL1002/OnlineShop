@@ -6,12 +6,12 @@ import {observer, Provider} from 'mobx-react';
 import routes from '~/routes/routes'
 import stores from '~s/main'
 
-import Header from '~c/header/header'
-import HeaderMobile from '~c/header/headerMobile'
-import Footer from '~c/footer/footer'
-import ScrollToTop from '~c/helpers/scrollToTop'
+import Header from '~c/Header/Header'
+import HeaderMobile from '~c/Header/HeaderMobile'
+import Footer from '~c/Footer/Footer'
+import ScrollToTop from '~c/helpers/ScrollToTop/ScrollToTop'
 
-import './app.scss'
+import './App.scss'
 
 @observer class App extends React.Component {
     render() {

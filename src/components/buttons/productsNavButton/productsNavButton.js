@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Sandwich from '~c/buttons/sandwich/sandwich'
+import Sandwich from '~c/buttons/Sandwich/Sandwich'
 
-import './productsNavButton.scss'
+import './ProductsNavButton.scss'
 
 export default function() {
     return (

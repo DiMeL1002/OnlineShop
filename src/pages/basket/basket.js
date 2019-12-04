@@ -1,9 +1,9 @@
 import React from 'react'
 import {Helmet} from "react-helmet";
 
-import Basket from '~c/basket/basket'
+import Basket from '~c/Basket/Basket'
 
-import './basket.scss'
+import './Basket.scss'
 
 export default function() {
     return (

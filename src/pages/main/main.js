@@ -1,13 +1,13 @@
 import React from 'react'
 import {Helmet} from "react-helmet";
 
-import Banner from '~c/sliders/banner'
-import Advantages from '~c/advantages/advantages'
-import NewsPreview from '~c/news/newsPreview'
-import ReviewsPreview from '~c/reviews/reviewsPreview'
-import BrandsPreview from '~c/brands/brandsPreview'
+import Banner from '~c/sliders/Banner/Banner'
+import Advantages from '~c/Advantages/Advantages'
+import NewsPreview from '~c/NewsPreview/NewsPreview'
+import ReviewsPreview from '~c/ReviewsPreview/ReviewsPreview'
+import BrandsPreview from '~c/BrandsPreview/BrandsPreview'
 
-import './main.scss'
+import './Main.scss'
 
 export default class extends React.Component {
     render() {

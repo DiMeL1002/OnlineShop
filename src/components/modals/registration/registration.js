@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
-import Button from '~c/buttons/button/button'
-import ModalContainer from '~c/modals/modalContainer/modalContainer'
+import Button from '~c/buttons/Button/Button'
+import ModalContainer from '~c/modals/ModalContainer/ModalContainer'
 
-import './registration.scss'
+import './Registration.scss'
 
 const regValues = {
     login: '',
